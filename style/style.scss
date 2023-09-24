@@ -1,22 +1,44 @@
-html,
+html, 
 body {
-   height: 100%;
+   font-family: 'Inter', sans-serif;
+   min-width: 1920px;
+   
 }
+
 .wrapper {
 display:  flex;
 flex-direction: column;
 height: 100%;
 }
-.header .menu, ol, {
+
+.header .menu, ol {
    display: flex;
    }
+
 .header {
-   
+   background: 
+   url(../image/Main/Logistic.png) no-repeat,
+   url(../image/Main/Logo.png) no-repeat;
+   background-position: center;
+   min-height: 1140px;
 }
+
+.menu {
+   .menu_img img{
+      width: 100px;
+      height: 78px;
+   }
+   .menu_list {
+      padding:  9px;
+      border-top:  2px dashed #4F4F4F;
+      border-bottom: 2px dashed #4F4F4F;
+   }
+}
+
 .main {
    flex: 1 0 auto;
-
 }
+
 .footer {
 flex: 0 0 auto;
 }
