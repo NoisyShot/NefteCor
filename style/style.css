@@ -4,6 +4,38 @@ body {
   min-width: 1920px;
 }
 
+a {
+  color: #FFF;
+  text-decoration: none;
+  vertical-align: super;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #CECECE;
+}
+
+button {
+  width: 288px;
+  height: 54px;
+  border-radius: 5px;
+  background: #DBA833;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.yellow_text {
+  color: #DBA833;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -14,26 +46,63 @@ body {
   display: flex;
 }
 
+ol {
+  justify-content: space-between;
+}
+
+li {
+  max-height: 25px;
+  line-height: 25px;
+}
+
+li img {
+  height: 25px;
+  width: 25px;
+}
+
+li p {
+  display: inline;
+  vertical-align: super;
+}
+
 .header {
-  background: url(../image/Main/Logistic.png) no-repeat, url(../image/Main/Logo.png) no-repeat;
+  background: url(../image/Main/Logistic.png) no-repeat, linear-gradient(180deg, #000 10.42%, rgba(0, 0, 0, 0.09) 79.69%, rgba(0, 0, 0, 0) 100%), url(../image/Main/Logo.png) no-repeat;
   background-position: center;
   min-height: 1140px;
 }
 
+.menu {
+  margin-top: 24px;
+  justify-content: center;
+}
 .menu .menu_img img {
   width: 100px;
   height: 78px;
+  margin-right: 34px;
 }
 .menu .menu_list {
-  padding: 9px;
+  padding: 5px 0 5px 0;
   border-top: 2px dashed #4F4F4F;
   border-bottom: 2px dashed #4F4F4F;
+  min-width: 1044px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.menu .menu_contacts {
+  color: #B6B6B6;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 22px 0 0 0;
 }
 
-.main {
-  flex: 1 0 auto;
+.top {
+  max-width: 1006px;
+  text-align: center;
+  margin: 364px auto 0 auto;
 }
-
-.footer {
-  flex: 0 0 auto;
+.top h4 {
+  margin: 15px;
+}
+.top button {
+  margin: 20px;
 }/*# sourceMappingURL=style.css.map */
