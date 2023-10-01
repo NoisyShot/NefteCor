@@ -16,8 +16,20 @@ h1 {
   color: #FFF;
 }
 
-h4 {
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #FFF;
+}
+
+h3 {
   font-size: 24px;
+  font-weight: 400;
+  color: #CECECE;
+}
+
+h4 {
+  font-size: 20px;
   font-weight: 400;
   color: #CECECE;
 }
@@ -40,6 +52,7 @@ button {
   display: flex;
   flex-direction: column;
   height: 100%;
+  margin: 0 auto;
 }
 
 .header .menu, ol {
@@ -105,4 +118,49 @@ li p {
 }
 .top button {
   margin: 20px;
+}
+
+.basis {
+  min-height: 800px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.basis .basis_left {
+  background: url(../image/Main/Trailer_Flammable.png);
+  background-position: right;
+  min-width: 960px;
+}
+.basis .basis_right {
+  background: url(../image/Main/Tanker.png);
+  background-position: right;
+  min-width: 960px;
+}
+
+.card {
+  text-align: center;
+  width: 530px;
+  height: 400px;
+  -webkit-backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
+  background-color: rgba(44, 44, 44, 0.8);
+  padding: 97px 90px 97px 90px;
+}
+.card h2 {
+  margin: 97px 0 0 0;
+}
+.card h4 {
+  margin: 15px 0 0 0;
+  text-align: left;
+}
+.card button {
+  margin: 30px 0 0 0;
+}
+
+.card_right {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 950px;
 }/*# sourceMappingURL=style.css.map */
