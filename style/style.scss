@@ -14,16 +14,21 @@ h1 {
    color:#FFF;
 }
 h2 {
+   font-size: 48px;
+   font-weight: 700;
+   color:#FFF;
+}
+h3 {
    font-size: 32px;
    font-weight: 600;
    color:#FFF;
 }
-h3 {
+h4 {
    font-size: 24px;
    font-weight: 400;
    color:#CECECE;
 }
-h4 {
+h5 {
    font-size: 20px;
    font-weight: 400;
    color:#CECECE;
@@ -36,21 +41,7 @@ background: #DBA833;
 border: none;
 font-size: 20px;
 font-weight: 700;
-
 }
-.yellow_text {
-   color: #DBA833;
-}
-.wrapper {
-display:  flex;
-flex-direction: column;
-height: 100%;
-margin: 0 auto;
-}
-.header .menu, ol {
-   display: flex;
-   }
-
 ol {
    justify-content: space-between;
 }
@@ -66,6 +57,18 @@ li p {
    display: inline;
    vertical-align: super;
 }
+.yellow_text {
+   color: #DBA833;
+}
+.wrapper {
+display:  flex;
+flex-direction: column;
+height: 100%;
+margin: 0 auto;
+}
+.header .menu, ol {
+   display: flex;
+   }
 .header {
    background: 
    url(../image/Main/Logistic.png) no-repeat,
@@ -114,12 +117,15 @@ li p {
    max-width: 1006px;
    text-align: center;
    margin: 364px auto 0 auto;
-   h4 {
+   h5 {
       margin: 15px;
    }
    button {
       margin: 20px;
    }
+   .head_basic {
+      margin: auto auto 40px auto;
+         } // ну последнее это дописать "Нефтепродукты" и начать делать новый блок
 }
 .basis {
    min-height: 800px;
@@ -140,26 +146,32 @@ li p {
 }
 .card {
    text-align: center;
-   width: 530px;
-   height: 400px;
+   width: 360px;
+ height: 206px;
    backdrop-filter: blur(2.5px);
    background-color: rgba(44, 44, 44, 0.80);
    padding: 97px 90px 97px 90px;
-   h2 {
-      margin: 97px 0 0 0;
+   h3 {
+      text-align: left;
    }
-   h4 {
+   h5 {
       margin: 15px 0 0 0;
       text-align: left;
    }
    button {
       margin: 30px 0 0 0;
+      width: 100%;
    }
 }
 .card_right {
-   border-top-right-radius: 30px;
    border-bottom-right-radius: 30px;
    position: absolute;
    top: 0;
-   left: 950px;
+   left: 49.5%;
+}
+.card_left {
+   border-top-left-radius: 30px;
+   position: absolute;
+   bottom: 0;
+   right: 49.5%;
 }

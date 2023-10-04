@@ -17,18 +17,24 @@ h1 {
 }
 
 h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+h3 {
   font-size: 32px;
   font-weight: 600;
   color: #FFF;
 }
 
-h3 {
+h4 {
   font-size: 24px;
   font-weight: 400;
   color: #CECECE;
 }
 
-h4 {
+h5 {
   font-size: 20px;
   font-weight: 400;
   color: #CECECE;
@@ -42,21 +48,6 @@ button {
   border: none;
   font-size: 20px;
   font-weight: 700;
-}
-
-.yellow_text {
-  color: #DBA833;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin: 0 auto;
-}
-
-.header .menu, ol {
-  display: flex;
 }
 
 ol {
@@ -76,6 +67,21 @@ li img {
 li p {
   display: inline;
   vertical-align: super;
+}
+
+.yellow_text {
+  color: #DBA833;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header .menu, ol {
+  display: flex;
 }
 
 .header {
@@ -113,11 +119,14 @@ li p {
   text-align: center;
   margin: 364px auto 0 auto;
 }
-.top h4 {
+.top h5 {
   margin: 15px;
 }
 .top button {
   margin: 20px;
+}
+.top .head_basic {
+  margin: auto auto 40px auto;
 }
 
 .basis {
@@ -139,28 +148,35 @@ li p {
 
 .card {
   text-align: center;
-  width: 530px;
-  height: 400px;
+  width: 360px;
+  height: 206px;
   -webkit-backdrop-filter: blur(2.5px);
           backdrop-filter: blur(2.5px);
   background-color: rgba(44, 44, 44, 0.8);
   padding: 97px 90px 97px 90px;
 }
-.card h2 {
-  margin: 97px 0 0 0;
+.card h3 {
+  text-align: left;
 }
-.card h4 {
+.card h5 {
   margin: 15px 0 0 0;
   text-align: left;
 }
 .card button {
   margin: 30px 0 0 0;
+  width: 100%;
 }
 
 .card_right {
-  border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   position: absolute;
   top: 0;
-  left: 950px;
+  left: 49.5%;
+}
+
+.card_left {
+  border-top-left-radius: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 49.5%;
 }/*# sourceMappingURL=style.css.map */
