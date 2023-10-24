@@ -1,36 +1,43 @@
+* {
+   color: #FFF;
+   text-decoration: none;
+   font-weight: 400;
+   font-size: 16px;
+   }
 html, 
 body {
    font-family: 'Inter', sans-serif;
-   min-width: 1920px;
+   width: 100%;
+   max-width: 100%;
+   overflow-x: hidden;
    }
+.wrapper {
+   max-width: 1920px;
+   min-width: 720px;
+   margin: 0 auto;
+   min-height: 100%;
+}
 a {
-   color: #FFF;
-   text-decoration: none;
    vertical-align: super;
 }
 h1 {
    font-size: 64px;
    font-weight: 700;
-   color:#FFF;
 }
 h2 {
    font-size: 48px;
    font-weight: 700;
-   color:#FFF;
 }
 h3 {
    font-size: 32px;
    font-weight: 600;
-   color:#FFF;
 }
 h4 {
    font-size: 24px;
-   font-weight: 400;
    color:#CECECE;
 }
 h5 {
    font-size: 20px;
-   font-weight: 400;
    color:#CECECE;
 }
 button {
@@ -60,19 +67,21 @@ li p {
 .yellow_text {
    color: #DBA833;
 }
+.capital_letters {
+   text-transform: uppercase;
+}
 .wrapper {
 display:  flex;
 flex-direction: column;
 height: 100%;
 margin: 0 auto;
 }
-.header .menu, ol {
+header .menu, ol {
    display: flex;
    }
-.header {
+header {
    background: 
-   url(../image/Main/Logistic.png) no-repeat,
-   linear-gradient(180deg, #000 10.42%, rgba(0, 0, 0, 0.09) 79.69%, rgba(0, 0, 0, 0.00) 100%),
+   url(../image/Main/Logistic.png) no-repeat, linear-gradient(180deg, #000000dc 3%, rgba(0, 0, 0, 0.09) 34%, rgba(0, 0, 0, 0.00) 100%),
    url(../image/Main/Logo.png) no-repeat;
    background-position: center;
    min-height: 1140px;
@@ -114,9 +123,23 @@ margin: 0 auto;
    }
 }
 .top {
+   padding: 88px 69px 63px 69px;   
    max-width: 1006px;
    text-align: center;
-   margin: 364px auto 0 auto;
+   margin: 177px auto 0 auto;
+
+.ten {z-index: 1;
+   position: absolute;
+   width: 1144px;
+   height: 423px;
+   border-radius: 50px;
+background: #000;
+filter: blur(150px);
+}
+h4 {
+   z-index: -1;
+   filter: brightness(1.5);
+}
    h5 {
       margin: 15px;
    }
@@ -127,27 +150,28 @@ margin: 0 auto;
       margin: auto auto 40px auto;
          } // ну последнее это дописать "Нефтепродукты" и начать делать новый блок
 }
-.basis {
+.product {
    min-height: 800px;
    display: flex;
    justify-content: center;
    position: relative;
-   .basis_left {
+   .product_left {
       background: 
    url(../image/Main/Trailer_Flammable.png);
       background-position: right;
       min-width: 960px;
    }
-   .basis_right {
+   .product_right {
       background:  url(../image/Main/Tanker.png);
       background-position: right;
       min-width: 960px;
       }
 }
 .card {
+   
    text-align: center;
    width: 360px;
- height: 206px;
+   height: 206px;
    backdrop-filter: blur(2.5px);
    background-color: rgba(44, 44, 44, 0.80);
    padding: 97px 90px 97px 90px;

@@ -1,42 +1,51 @@
+* {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
 html,
 body {
   font-family: "Inter", sans-serif;
-  min-width: 1920px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1920px;
+  min-width: 720px;
+  margin: 0 auto;
+  min-height: 100%;
 }
 
 a {
-  color: #FFF;
-  text-decoration: none;
   vertical-align: super;
 }
 
 h1 {
   font-size: 64px;
   font-weight: 700;
-  color: #FFF;
 }
 
 h2 {
   font-size: 48px;
   font-weight: 700;
-  color: #FFF;
 }
 
 h3 {
   font-size: 32px;
   font-weight: 600;
-  color: #FFF;
 }
 
 h4 {
   font-size: 24px;
-  font-weight: 400;
   color: #CECECE;
 }
 
 h5 {
   font-size: 20px;
-  font-weight: 400;
   color: #CECECE;
 }
 
@@ -73,6 +82,10 @@ li p {
   color: #DBA833;
 }
 
+.capital_letters {
+  text-transform: uppercase;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -80,12 +93,12 @@ li p {
   margin: 0 auto;
 }
 
-.header .menu, ol {
+header .menu, ol {
   display: flex;
 }
 
-.header {
-  background: url(../image/Main/Logistic.png) no-repeat, linear-gradient(180deg, #000 10.42%, rgba(0, 0, 0, 0.09) 79.69%, rgba(0, 0, 0, 0) 100%), url(../image/Main/Logo.png) no-repeat;
+header {
+  background: url(../image/Main/Logistic.png) no-repeat, linear-gradient(180deg, rgba(0, 0, 0, 0.862745098) 3%, rgba(0, 0, 0, 0.09) 34%, rgba(0, 0, 0, 0) 100%), url(../image/Main/Logo.png) no-repeat;
   background-position: center;
   min-height: 1140px;
 }
@@ -115,9 +128,23 @@ li p {
 }
 
 .top {
+  padding: 88px 69px 63px 69px;
   max-width: 1006px;
   text-align: center;
-  margin: 364px auto 0 auto;
+  margin: 177px auto 0 auto;
+}
+.top .ten {
+  z-index: 1;
+  position: absolute;
+  width: 1144px;
+  height: 423px;
+  border-radius: 50px;
+  background: #000;
+  filter: blur(150px);
+}
+.top h4 {
+  z-index: -1;
+  filter: brightness(1.5);
 }
 .top h5 {
   margin: 15px;
@@ -129,18 +156,18 @@ li p {
   margin: auto auto 40px auto;
 }
 
-.basis {
+.product {
   min-height: 800px;
   display: flex;
   justify-content: center;
   position: relative;
 }
-.basis .basis_left {
+.product .product_left {
   background: url(../image/Main/Trailer_Flammable.png);
   background-position: right;
   min-width: 960px;
 }
-.basis .basis_right {
+.product .product_right {
   background: url(../image/Main/Tanker.png);
   background-position: right;
   min-width: 960px;
