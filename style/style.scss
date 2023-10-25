@@ -1,15 +1,35 @@
-* {
-   color: #FFF;
-   text-decoration: none;
-   font-weight: 400;
-   font-size: 16px;
-   }
-html, 
-body {
+html{
    font-family: 'Inter', sans-serif;
    width: 100%;
    max-width: 100%;
    overflow-x: hidden;
+   font-size: 16px;
+   font-weight: 500;
+   color: #5B5B5B;
+      }
+   h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #fff;
+   }
+   h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #fff;
+   }
+   h3 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+   }
+   h4 {
+      font-size: 1.5rem;
+      color:#CECECE;
+      font-weight: 600;
+   }
+   a {
+      text-decoration: none;
+      color: #fff;
    }
 .wrapper {
    max-width: 1920px;
@@ -17,56 +37,55 @@ body {
    margin: 0 auto;
    min-height: 100%;
 }
+.navbar {
+   display: flex;
+   margin-top: 24px;
+   justify-content: center;
+      ol {
+      //gap: 37px;
+      justify-content: space-between;
+   }
+   li{
+      max-height: 25px;
+      line-height: 25px;
+   }
+   li img {
+      height: 25px;
+      width: 25px;
+   }
+   .navbar_contant {
+      padding: 9px 0 9px 34px;
+   }
+   .navbar_list {
+      padding: 5px 0;
+      border: 2px dashed #4F4F4F;
+      border-left: 0;
+      border-right: 0;
+      min-width: 1044px;
+      font-size: 15px;
+      font-weight: 700;
+      a:last-child {
+         list-style-image: url(../image/Icons/Personal_Area.svg);
+         list-style-position: inside; 
+         
+         }
+   }
+}
+
+
+
 a {
-   vertical-align: super;
-}
-h1 {
-   font-size: 64px;
-   font-weight: 700;
-}
-h2 {
-   font-size: 48px;
-   font-weight: 700;
-}
-h3 {
-   font-size: 32px;
-   font-weight: 600;
-}
-h4 {
-   font-size: 24px;
-   color:#CECECE;
-}
-h5 {
-   font-size: 20px;
-   color:#CECECE;
-}
-button {
-   width: 288px;
-height: 54px;
-border-radius: 5px;
-background: #DBA833;
-border: none;
-font-size: 20px;
-font-weight: 700;
-}
-ol {
-   justify-content: space-between;
-}
-li{
-   max-height: 25px;
-   line-height: 25px;
-}
-li img {
-   height: 25px;
-   width: 25px;
-}
-li p {
-   display: inline;
    vertical-align: super;
 }
 .yellow_text {
    color: #DBA833;
 }
+h5 {
+   font-size: 20px;
+   color:#CECECE;
+}
+
+
 .capital_letters {
    text-transform: uppercase;
 }
@@ -87,9 +106,6 @@ header {
    min-height: 1140px;
 }
 .menu {
-   margin-top: 24px;
-   justify-content: center;
-
    .menu_img img {
       width: 100px;
       height: 78px;
