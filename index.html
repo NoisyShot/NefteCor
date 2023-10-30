@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="style/normalize.css">
    <link rel="stylesheet" href="style/style.css">
 
-
+   <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
    <script src="script/script.js" defer></script>
 </head>
 
@@ -47,7 +47,7 @@
                         <li>Контакты</li>
                      </a>
                      <a href="#">
-                        <li>Личный кабинет</li>
+                        <li><img src="image/Icons/Personal_Area.svg" alt="Personal_Area">Личный кабинет</li>
                      </a>
                   </ol>
                </div>
@@ -67,46 +67,47 @@
             </div>
          </nav>
          <div class="top">
-            <!--<div class="ten"></div>-->
             <h1><span class="yellow_text">Поставка нефтепродуктов</span> в Москве и Московской области</h1>
-            <h4>От 1000 литров и от 46 рублей за литр</h4>
+            <p>От 1000 литров и от 46 рублей за литр</p>
             <a href="#"> Заказать звонок </a>
          </div>
-         <div class="head_basic">
-            <h2>Нефтепродукты</h2>
-         </div>
+
       </header>
       <div class="main">
          <div class=" block product">
             <div class="product_left">
+               <div class="head_basic">
+                  <h2>Нефтепродукты</h2>
+               </div>
                <div class="card card_left">
                   <h3>Судовое топливо</h3>
-                  <h5>Мы предоставляем судовое дизельное топливо как для физических лиц, так и компаниям</h5>
-                  <button> <a href="Marine_fuel.html"> Подробнее </a></button>
+                  <p>Мы предоставляем судовое дизельное топливо как для физических лиц, так и компаниям</p>
+                  <a href="Marine_fuel.html"> Подробнее </a>
                </div>
             </div>
             <div class="product_right">
                <div class="card card_right">
                   <h3>Дизельное топливо</h3>
-                  <h5>Мы являемся надежным поставщиком дизельного топлива в Москве и Московской области</h5>
-                  <button> <a href="DT_fuel.html"> Подробнее </a></button>
+                  <p>Мы являемся надежным поставщиком дизельного топлива в Москве и Московской области</p>
+                  <a href="DT_fuel.html"> Подробнее </a>
                </div>
             </div>
             <div class="product_bottom">
                <div class="card card_bottom">
                   <h3>Печное топливо</h3>
-                  <h5>Печное топливо может служить для отопления коммерческой недвижимости и частных домов, строительных
-                     площадок, в качестве топлива для небольших котельных и сельхоз организаций.</h5>
-                  <button> <a href="Marine_fuel.html"> Подробнее </a></button>
+                  <p>Печное топливо может служить для отопления коммерческой недвижимости и частных домов, строительных
+                     площадок, в качестве топлива для небольших котельных и сельхоз организаций.</p>
+                  <a href="Marine_fuel.html"> Подробнее </a>
                </div>
             </div>
          </div>
          <div class="block gas_station">
             <h2>Умная <span class="yellow_text capital_letters">азс нефтекор</span></h2>
-            <h4>Мы предоставляем АЗС с комплектом разрешительной документации. У нас есть решение для любого объема
+            <p>Мы предоставляем АЗС с комплектом разрешительной документации. У нас есть решение для любого объема
                потребления
-            </h4>
+            </p>
             <div class="card_block">
+               <a class="scrollto" href="#form"><img src="image/Icons/Arrow 1.svg" alt=""></a>
                <div class="card_gas_station">
                   <img src="/image/Mini Gas Station Kit/Mini_GS_Kit-1.png" alt="Mini_GS_Kit-1">
                   <h4>Мини АЗС на <span class="yellow_text">4500 литров</span></h4>
@@ -221,7 +222,7 @@
             </div>
             <button>Смотреть все новости</botton>
          </div>
-         <div class="block form">
+         <div class="block form" id="form">
             <form action="#">
                <div class="form_block">
                   <h3>Свяжитесь<span class="yellow_text"> с нами!</span></h3>
