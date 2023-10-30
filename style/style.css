@@ -63,6 +63,11 @@ li {
   display: flex;
 }
 
+.block {
+  max-width: 1200px;
+  text-align: center;
+}
+
 .wrapper {
   max-width: 1920px;
   min-width: 720px;
@@ -130,6 +135,7 @@ header .top p {
 }
 
 .main .product {
+  max-width: 1920px;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -191,6 +197,7 @@ header .top p {
   margin-top: 30px;
 }
 .main .gas_station {
+  max-width: 1920px;
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -205,7 +212,6 @@ header .top p {
   border: #2d2d2d 3px dashed;
   border-radius: 20px;
   padding: 36px;
-  text-align: center;
 }
 .main .gas_station .block_center h2 {
   color: #000000;
@@ -237,8 +243,6 @@ header .top p {
 }
 .main .manufacturers {
   margin: 160px auto 0 auto;
-  max-width: 1200px;
-  text-align: center;
 }
 .main .manufacturers p {
   font-size: 1.5rem;
@@ -248,4 +252,16 @@ header .top p {
   margin-top: 30px;
   justify-content: space-around;
   gap: 43px;
+}
+.main .geography {
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 112px;
+  padding: 50px 100px 80px 100px;
+  background: radial-gradient(#f8f8f8 70%, #fff 20%);
+}
+.main .geography img {
+  width: 85%;
+  max-height: 72%;
+  margin-top: 25px;
 }/*# sourceMappingURL=style.css.map */
