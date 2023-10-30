@@ -50,6 +50,9 @@ li {
 .capital_letters {
    text-transform: uppercase;
 }
+.card_block {
+   display: flex;
+}
 
 .wrapper {
    max-width: 1920px;
@@ -229,9 +232,8 @@ header {
          }
       }
       .card_block {
-         display: flex;
-         margin-top: 20px;
          justify-content: space-around;
+         margin-top: 20px;
          gap: 40px;
          h4 {
             margin-top: 20px;
@@ -246,5 +248,19 @@ header {
 
    // Стили третьего блока
    .manufacturers {
+      margin: 160px auto 0 auto;
+      max-width: 1200px;
+      text-align: center;
+      p {
+         font-size: 1.5rem;
+         margin-top: 5px;
+      }
+      .card_block {
+         margin-top: 30px;
+         justify-content: space-around;
+         gap: 43px;
+      }
    }
+
+   // Стили третьего блока
 }
