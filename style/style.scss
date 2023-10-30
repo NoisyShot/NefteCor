@@ -197,10 +197,54 @@ header {
 
    // Стили первого блока
    .gas_station {
-      margin: 50px auto 0 auto;
-      max-width: 1200px;
-      h2 {
-         color: #000000;
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      a {
+         margin-top: 150px;
+         display: inline-block;
       }
+
+      .block_center {
+         margin-top: 50px;
+         max-width: 1200px;
+         border: #2d2d2d 3px dashed;
+         border-radius: 20px;
+         padding: 36px;
+         text-align: center;
+         h2 {
+            color: #000000;
+         }
+         p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 5px 175px 0 175px;
+            width: 72%;
+         }
+         a {
+            margin-top: 40px;
+            padding: 13px 122px;
+            border-radius: 5px;
+            border: 2px solid #dba833;
+         }
+      }
+      .card_block {
+         display: flex;
+         margin-top: 20px;
+         justify-content: space-around;
+         gap: 40px;
+         h4 {
+            margin-top: 20px;
+         }
+         p {
+            margin: 5px auto auto auto;
+            font-size: 1rem;
+            font-weight: 400;
+         }
+      }
+   }
+
+   // Стили третьего блока
+   .manufacturers {
    }
 }
