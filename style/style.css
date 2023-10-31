@@ -65,6 +65,11 @@ li {
   text-transform: uppercase;
 }
 
+.vertical_text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
 .card_block {
   display: flex;
 }
@@ -256,6 +261,12 @@ header .top p {
   justify-content: space-around;
   gap: 43px;
 }
+.main .manufacturers img {
+  transition: 0.5s;
+}
+.main .manufacturers img:hover {
+  transform: rotate(1turn) scale(1.4);
+}
 .main .geography {
   max-width: 1400px;
   margin: 0 auto;
@@ -275,4 +286,49 @@ header .top p {
   margin-top: 20px;
   justify-content: space-around;
   gap: 43px;
+}
+.main .clients img {
+  transition: 0.5s;
+}
+.main .clients img:hover {
+  transform: rotate(1turn) scale(1.4);
+}
+.main .reviews {
+  margin-top: 120px;
+  border-radius: 150px;
+  border: 3px dashed #dba833;
+  background: #f8f8f8;
+  padding: 25px 116px 62px 94px;
+}
+.main .reviews p {
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: left;
+  max-width: 750px;
+}
+.main .reviews h3 {
+  text-align: left;
+  margin-top: 50px;
+}
+.main .reviews img {
+  margin-right: 40px;
+  max-width: 212px;
+  max-height: 300px;
+  transition: 1s;
+}
+.main .reviews img:hover {
+  margin-top: 20px;
+  transform: scale(1.35);
+}
+.main .reviews .reviews_card {
+  display: flex;
+  border-radius: 50px;
+  border: 1px solid #000;
+  margin-top: 30px;
+  padding: 30px;
+}
+.main .reviews .reviews_card .vertical_text {
+  text-align: center;
+  max-height: 230px;
+  margin: 46px 15px 64px auto;
 }/*# sourceMappingURL=style.css.map */
