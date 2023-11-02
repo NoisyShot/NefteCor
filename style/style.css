@@ -1,4 +1,4 @@
-.main .product .card a, header .top a {
+.main .news .all_news, .main .news .news_card .new_text a, .main .gas_station .block_center a, .main .product .card a, header .top a {
   display: inline-block;
   padding: 15px 60px;
   border-radius: 5px;
@@ -57,7 +57,7 @@ li {
   font-weight: 700;
 }
 
-.yellow_text {
+.yellow_text, .main .news .all_news, .main .news .news_card .new_text a {
   color: #dba833;
 }
 
@@ -107,7 +107,7 @@ header .navbar li {
   gap: 6px;
   display: flex;
 }
-header .navbar .navbar_contant {
+header .navbar .navbar_content {
   padding: 9px 0 9px 34px;
 }
 header .navbar .navbar_list {
@@ -237,8 +237,8 @@ header .top p {
 .main .gas_station .block_center a {
   margin-top: 40px;
   padding: 13px 122px;
-  border-radius: 5px;
   border: 2px solid #dba833;
+  background: none;
 }
 .main .gas_station .card_block {
   justify-content: space-around;
@@ -331,4 +331,54 @@ header .top p {
   text-align: center;
   max-height: 230px;
   margin: 46px 15px 64px auto;
+}
+.main .news {
+  margin-top: 80px;
+}
+.main .news .block_news_card {
+  display: flex;
+  text-align: left;
+  margin-top: 30px;
+  gap: 40px;
+  justify-content: center;
+}
+.main .news .news_card {
+  border: 1px solid #000;
+  border-radius: 15px;
+}
+.main .news .news_card .new_img {
+  padding: 17px 62px;
+  border-bottom: 1px solid #000;
+  background: #f8f8f8;
+  border-radius: 15px 15px 0 0;
+  display: inline-block;
+  margin: 0 auto;
+}
+.main .news .news_card .new_text {
+  padding: 20px;
+  max-width: 270px;
+}
+.main .news .news_card .new_text h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: black;
+}
+.main .news .news_card .new_text p {
+  font-size: 1rem;
+}
+.main .news .news_card .new_text a {
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #dba833;
+  margin-top: 37px;
+  padding: 10px 90px;
+  font-size: 1rem;
+}
+.main .news .all_news {
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #dba833;
+  margin-top: 37px;
+  font-size: 1.25rem;
 }/*# sourceMappingURL=style.css.map */

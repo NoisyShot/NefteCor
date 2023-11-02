@@ -99,7 +99,7 @@ header {
          display: flex;
       }
 
-      .navbar_contant {
+      .navbar_content {
          padding: 9px 0 9px 34px;
       }
       .navbar_list {
@@ -241,10 +241,11 @@ header {
             width: 72%;
          }
          a {
+            @extend %yellow_button;
             margin-top: 40px;
             padding: 13px 122px;
-            border-radius: 5px;
             border: 2px solid #dba833;
+            background: none;
          }
       }
       .card_block {
@@ -346,6 +347,62 @@ header {
             max-height: 230px;
             margin: 46px 15px 64px auto;
          }
+      }
+   }
+
+   // Стили седьмого блока
+   .news {
+      margin-top: 80px;
+      .block_news_card {
+         display: flex;
+         text-align: left;
+         margin-top: 30px;
+         gap: 40px;
+         justify-content: center;
+      }
+      .news_card {
+         border: 1px solid #000;
+         border-radius: 15px;
+         .new_img {
+            padding: 17px 62px;
+            border-bottom: 1px solid #000;
+            background: #f8f8f8;
+            border-radius: 15px 15px 0 0;
+            display: inline-block;
+            margin: 0 auto;
+         }
+         .new_text {
+            padding: 20px;
+            max-width: 270px;
+            h3 {
+               font-size: 1.25rem;
+               font-weight: 600;
+               color: black;
+            }
+            p {
+               font-size: 1rem;
+            }
+            a {
+               @extend %yellow_button;
+               @extend .yellow_text;
+               background: #fff;
+               border-radius: 5px;
+               border: 1px solid #dba833;
+               margin-top: 37px;
+               padding: 10px 90px;
+               font-size: 1rem;
+            }
+         }
+      }
+      .all_news {
+         margin-top: 30px;
+         @extend %yellow_button;
+         @extend .yellow_text;
+         background: #fff;
+         border-radius: 5px;
+         border: 2px solid #dba833;
+         margin-top: 37px;
+         font-size: 1.25rem;
       }
    }
 }
