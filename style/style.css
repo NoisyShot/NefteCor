@@ -57,7 +57,7 @@ li {
   font-weight: 700;
 }
 
-.yellow_text, .main .news .all_news, .main .news .news_card .new_text a {
+.yellow_text, .main .form [type=submit], .main .news .all_news, .main .news .news_card .new_text a {
   color: #dba833;
 }
 
@@ -381,4 +381,81 @@ header .top p {
   border: 2px solid #dba833;
   margin-top: 37px;
   font-size: 1.25rem;
+}
+.main .form {
+  margin-top: 100px;
+  background: url(../image/Main/Logo_Form.png) no-repeat;
+  max-width: 1920px;
+  min-height: 400px;
+  text-align: left;
+  padding-top: 145px;
+}
+.main .form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 15px;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.main .form h3 {
+  font-size: 2.25rem;
+  grid-column: 1;
+}
+.main .form input {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: rgba(30, 30, 30, 0.7);
+  max-height: 44px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.main .form input::-moz-selection {
+  background-color: #dba833;
+  color: #000;
+}
+.main .form input::selection {
+  background-color: #dba833;
+  color: #000;
+}
+.main .form input::-moz-placeholder {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.main .form input::placeholder {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.main .form [type=text] {
+  grid-column: 1;
+  grid-row: 2;
+}
+.main .form [type=tel] {
+  grid-column: 2;
+  grid-row: 2;
+}
+.main .form [type=submit] {
+  grid-column: 3;
+  grid-row: 2;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #dba833;
+}
+.main .form p {
+  grid-column: 3;
+  grid-row: 3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0;
+}
+.main .form p a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid;
 }/*# sourceMappingURL=style.css.map */
