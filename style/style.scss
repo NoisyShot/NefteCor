@@ -412,9 +412,9 @@ header {
       margin-top: 100px;
       background: url(../image/Main/Logo_Form.png) no-repeat;
       max-width: 1920px;
-      min-height: 400px;
       text-align: left;
-      padding-top: 145px;
+      padding: 145px 0 125px 0;
+
       form {
          display: grid;
          grid-template-columns: 1fr 1fr 1fr;
@@ -474,6 +474,51 @@ header {
             font-size: 1rem;
             font-weight: 700;
             border-bottom: 1px solid;
+         }
+      }
+   }
+   // Стили девятого блока
+   .team {
+      margin-top: 0;
+      background-color: #1f1f1f;
+      background-image: url(../image/Main/Our_Team/BackGr.svg), url(../image/Main/Our_Team/BackGr.svg);
+      background-repeat: no-repeat, no-repeat;
+      background-size: contain, contain;
+      background-position:
+         bottom -80px left 0,
+         bottom 190px right -40px;
+      max-width: 1920px;
+      padding: 35px 0 45px 0;
+      h2 {
+         color: #fff;
+      }
+      .block_employees {
+         display: flex;
+         margin: 20px auto;
+         max-width: 1200px;
+         column-gap: 30px;
+         img {
+            border-radius: 10px;
+            border: #dba833 solid 2px;
+            width: 350px;
+            height: 400px;
+            transition: 1s;
+         }
+         img:hover {
+            transform: scale(1.1);
+         }
+         h3 {
+            margin-top: 15px;
+         }
+         p {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 700;
+         }
+         p[type="tel"] {
+            margin-top: 10px;
+            color: #b9b9b9;
+            font-weight: 400;
          }
       }
    }
