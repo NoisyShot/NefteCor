@@ -1,3 +1,18 @@
+@charset "UTF-8";
+*::-webkit-scrollbar {
+  width: 12px; /* ширина всей полосы прокрутки */
+}
+
+*::-webkit-scrollbar-track {
+  background: orange; /* цвет зоны отслеживания */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue; /* цвет бегунка */
+  border-radius: 20px; /* округлось бегунка */
+  border: 3px solid orange; /* отступ вокруг бегунка */
+}
+
 .main .news .all_news, .main .news .news_card .new_text a, .main .gas_station .block_center a, .main .product .card a, header .top a {
   display: inline-block;
   padding: 15px 60px;
@@ -72,6 +87,7 @@ li {
 
 .card_block {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .block {
@@ -102,10 +118,12 @@ header .navbar ol {
   justify-content: space-between;
 }
 header .navbar li {
-  max-height: 25px;
   line-height: 30px;
   gap: 6px;
   display: flex;
+}
+header .navbar .floating_navbar {
+  display: none;
 }
 header .navbar .navbar_content {
   padding: 9px 0 9px 34px;
@@ -211,8 +229,7 @@ header .top p {
 .main .gas_station {
   max-width: 1920px;
   display: flex;
-  justify-content: center;
-  gap: 100px;
+  justify-content: space-around;
 }
 .main .gas_station a {
   margin-top: 150px;
@@ -243,7 +260,10 @@ header .top p {
 .main .gas_station .card_block {
   justify-content: space-around;
   margin-top: 20px;
-  gap: 40px;
+  flex-wrap: nowrap;
+}
+.main .gas_station .card_block .card_gas_station {
+  max-width: 350px;
 }
 .main .gas_station .card_block h4 {
   margin-top: 20px;
@@ -260,12 +280,8 @@ header .top p {
   margin-top: 30px;
   justify-content: space-around;
   gap: 43px;
-}
-.main .manufacturers img {
-  transition: 0.5s;
-}
-.main .manufacturers img:hover {
-  transform: rotate(1turn) scale(1.4);
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 .main .geography {
   max-width: 1400px;
@@ -286,12 +302,8 @@ header .top p {
   margin-top: 20px;
   justify-content: space-around;
   gap: 43px;
-}
-.main .clients img {
-  transition: 0.5s;
-}
-.main .clients img:hover {
-  transform: rotate(1turn) scale(1.4);
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 .main .reviews {
   margin-top: 120px;
@@ -337,6 +349,7 @@ header .top p {
 }
 .main .news .block_news_card {
   display: flex;
+  flex-wrap: wrap;
   text-align: left;
   margin-top: 30px;
   gap: 40px;
@@ -442,7 +455,7 @@ header .top p {
   grid-row: 2;
   background: #fff;
   border-radius: 5px;
-  border: 2px solid #dba833;
+  border: 3px solid #dba833;
 }
 .main .form p {
   grid-column: 3;
@@ -456,7 +469,7 @@ header .top p {
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
-  border-bottom: 1px solid;
+  text-decoration-line: underline;
 }
 .main .team {
   margin-top: 0;
@@ -473,6 +486,8 @@ header .top p {
 }
 .main .team .block_employees {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 20px auto;
   max-width: 1200px;
   -moz-column-gap: 30px;
@@ -500,4 +515,169 @@ header .top p {
   margin-top: 10px;
   color: #b9b9b9;
   font-weight: 400;
+}
+.main .map {
+  max-width: 1920px;
+}
+
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+footer .offers {
+  display: grid;
+  grid-template-columns: 100px 400px;
+  grid-template-rows: repeat(3, 1fr);
+  margin-bottom: 40px;
+  row-gap: 10px;
+}
+footer .offers p {
+  color: #dba833;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+footer .offers img {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+footer .offers .first_line {
+  grid-column: 2/3;
+}
+footer .offers .second_line {
+  grid-column: 2/3;
+  grid-row: 2;
+}
+footer .offers .third_line {
+  grid-column: 2/3;
+  grid-row: 3;
+}
+footer .menu ol {
+  display: grid;
+  grid-template-columns: repeat(3, 175px);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px 40px;
+}
+footer .menu ol li:nth-child(2) {
+  grid-row: 2;
+}
+footer .menu ol li:nth-child(3) {
+  grid-row: 3;
+}
+footer .menu ol li:nth-child(5) {
+  grid-row: 2;
+}
+footer .menu ol li:nth-child(6) {
+  grid-row: 3;
+}
+footer .menu ol li:nth-child(7) {
+  border-radius: 10px;
+  border: 2px solid #b6b6b6;
+  padding: 8px 12px;
+  text-align: center;
+  grid-row: 1/4;
+}
+footer .menu ol li:nth-child(7) a {
+  display: flex;
+  flex-direction: column;
+}
+footer .menu ol li:nth-child(7) img {
+  display: inline-block;
+  width: 35px;
+  height: 42px;
+  margin: 0 auto;
+}
+footer .copyright {
+  padding-top: 20px;
+  border-top: 1px dashed #b6b6b6;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  align-content: space-between;
+}
+footer .copyright p,
+footer .copyright a {
+  margin-top: auto;
+  font-size: 1rem;
+}
+footer .copyright p:last-child {
+  grid-column: 3;
+  flex-wrap: nowrap;
+  text-align: right;
+}
+footer .copyright p:last-child a {
+  margin-left: 25px;
+}
+footer .copyright a {
+  text-decoration-line: underline;
+}
+footer a {
+  color: #5b5b5b;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  li {
+    font-size: 0.8rem;
+  }
+  header .navbar {
+    display: flex;
+    padding: 10px;
+  }
+  header .navbar ol {
+    display: flex;
+    justify-content: space-between;
+  }
+  header .navbar li {
+    line-height: 30px;
+    gap: 6px;
+    display: flex;
+  }
+  header .navbar .navbar_content {
+    padding: 9px 0 9px 34px;
+  }
+  header .navbar .navbar_list {
+    display: none;
+  }
+  header .navbar .navbar_contacts {
+    color: #b6b6b6;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 22px;
+  }
+  header .top {
+    padding: 90px 70px;
+    max-width: 1006px;
+    text-align: center;
+    margin: 170px auto 0 auto;
+    background: radial-gradient(circle 190px at 150px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)), radial-gradient(circle 190px at 300px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)), radial-gradient(circle 190px at 450px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)), radial-gradient(circle 190px at 600px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)), radial-gradient(circle 190px at 750px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)), radial-gradient(circle 190px at 900px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0));
+  }
+  header .top h4 {
+    margin-top: 15px;
+  }
+  header .top a {
+    min-width: 168px;
+    height: 24px;
+    margin-top: 20px;
+  }
+  header .top p {
+    font-size: 1.5rem;
+    color: #cecece;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=style.css.map */
