@@ -24,7 +24,7 @@
    <div class="wrapper">
       <header>
          <nav class="navbar">
-            <div class="navbar_img"><a href="#"><img src="image/Main/Menu_Logo.svg" alt="Logo_NefteCor"></a></div>
+            <div class="navbar_img"><img src="image/Main/Menu_Logo.svg" alt="Logo_NefteCor"></div>
             <div class="navbar_content">
                <div class="navbar_list">
                   <ol>
@@ -67,22 +67,54 @@
                      </li>
                   </ol>
                </div>
-               <div class="floating_navbar"></div>
+
+            </div>
+            <!--Выплывающее меню-->
+            <div id="floatingNavbar" class="floating_navbar show" onclick="myFunction()"><img src=" image/Icons/NAV.svg"
+                  alt="NAV"> </div>
+            <div class="floating_block" id="floatingBlock">
+               <ol>
+                  <a href="index.html">
+                     <li>Главная</li>
+                  </a>
+                  <a href="DT_fuel.html">
+                     <li>Дизельное топливо</li>
+                  </a>
+                  <a href="Mini_Gas_station.html">
+                     <li>Мини-АЗС</li>
+                  </a>
+                  <a href="Stove_Heating.html">
+                     <li>Печное топливо</li>
+                  </a>
+                  <a href="Marine_fuel.html">
+                     <li>Судовое топливо</li>
+                  </a>
+                  <a href="Blog.html">
+                     <li>Блог</li>
+                  </a>
+                  <a href="Contacts.html">
+                     <li>Контакты</li>
+                  </a>
+                  <a href="#">
+                     <li><img src="image/Icons/Personal_Area(yellow).svg" alt="Personal_Area"><span
+                           class="yellow_text">Личный
+                           кабинет</span></li>
+                  </a>
+               </ol>
+
             </div>
          </nav>
          <div class="top">
             <h1><span class="yellow_text">Поставка нефтепродуктов</span> в Москве и Московской области</h1>
             <p>От 1000 литров и от 46 рублей за литр</p>
-            <a href="#"> Заказать звонок </a>
+            <a class="scrollto" href="#form"> Заказать звонок </a>
          </div>
+         <h2>Нефтепродукты</h2>
 
       </header>
       <div class="main">
          <div class=" block product">
             <div class="product_left">
-               <div class="head_basic">
-                  <h2>Нефтепродукты</h2>
-               </div>
                <div class="card card_left">
                   <h3>Судовое топливо</h3>
                   <p>Мы предоставляем судовое дизельное топливо как для физических лиц, так и компаниям</p>

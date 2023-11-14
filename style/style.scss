@@ -17,6 +17,16 @@
    border-radius: 5px;
    background: #dba833;
 }
+%tdl_under {
+   display: block;
+   position: absolute;
+   left: 0;
+   width: 0;
+   height: 2px;
+   background-color: #fff;
+   content: "";
+   transition: width 0.3s ease-out;
+}
 //Стили для всей страницы
 html {
    font-family: "Inter", sans-serif;
@@ -53,10 +63,12 @@ p {
    font-weight: 400;
 }
 a {
+   position: relative;
    text-decoration: none;
    color: #fff;
    font-size: 1.25rem;
    font-weight: 700;
+   cursor: pointer;
 }
 li {
    font-size: 1rem;
@@ -96,8 +108,13 @@ header {
       linear-gradient(180deg, #000000 3%, rgba(0, 0, 0, 0.09) 34%, rgba(0, 0, 0, 0) 100%),
       url(../image/Main/Logo.png) no-repeat;
    background-position: center;
-   min-height: 1140px;
-
+   max-height: 1142px;
+   h2 {
+      color: #fff;
+      text-align: center;
+      margin-top: 300px;
+      padding-bottom: 40px;
+   }
    .navbar {
       display: flex;
       padding: 22px;
@@ -106,12 +123,20 @@ header {
          display: flex;
          justify-content: space-between;
       }
+      a:after {
+         @extend %tdl_under;
+      }
+      a:hover:after,
+      a:focus:after {
+         width: 100%;
+      }
       li {
          line-height: 30px;
          gap: 6px;
          display: flex;
       }
-      .floating_navbar {
+      .floating_navbar,
+      .floating_block {
          display: none;
       }
       .navbar_content {
@@ -133,7 +158,6 @@ header {
          margin-top: 22px;
       }
    }
-
    .top {
       padding: 90px 70px;
       max-width: 1006px;
@@ -145,19 +169,13 @@ header {
          radial-gradient(circle 208px at 600px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
          radial-gradient(circle 208px at 750px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
          radial-gradient(circle 208px at 900px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0));
-      h4 {
-         margin-top: 15px;
-      }
       a {
          @extend %yellow_button;
-         min-width: 168px;
-         height: 24px;
-         margin-top: 20px;
+         margin-top: 2vw;
       }
       p {
-         font-size: 1.5rem;
          color: #cecece;
-         font-weight: 400;
+         margin-top: 15px;
       }
    }
 }
@@ -170,14 +188,6 @@ header {
       position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      .head_basic {
-         position: absolute;
-         top: -88px;
-         left: 39.6%;
-         h2 {
-            color: #fff;
-         }
-      }
       .product_left {
          background: url(../image/Main/Trailer_Flammable.png) no-repeat right;
          height: 800px;
@@ -655,7 +665,7 @@ footer {
       font-size: 3rem;
    }
    h2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
    }
    h3 {
       font-size: 1.5rem;
@@ -666,31 +676,58 @@ footer {
 
    // Стили Header
    header {
+      h2 {
+         margin-top: 34vw;
+         padding-bottom: 2vw;
+      }
       .navbar {
          display: flex;
          padding: 10px;
+         align-items: center;
+         justify-content: space-evenly;
 
          ol {
             display: flex;
             justify-content: space-between;
+            gap: 1vw;
          }
          li {
             line-height: 30px;
             gap: 6px;
             display: flex;
          }
-
          .navbar_content {
-            padding: 9px 0 9px 34px;
+            padding: 0;
          }
-         .navbar_list {
+         .navbar_list,
+         .floating_block {
             display: none;
          }
+
+         .floating_block {
+            background: #fff;
+            padding: 80px 100px 80px 15px;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            ol {
+               display: flex;
+               flex-direction: column;
+            }
+            li {
+               color: #272727;
+               font-size: 1.5rem;
+            }
+         }
+
          .navbar_contacts {
-            color: #b6b6b6;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-top: 22px;
+            margin-top: 0px;
+         }
+
+         .show {
+            display: block;
+            transition: 1s;
          }
       }
 
