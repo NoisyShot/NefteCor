@@ -1,16 +1,3 @@
-*::-webkit-scrollbar {
-   width: 12px; /* ширина всей полосы прокрутки */
-}
-
-*::-webkit-scrollbar-track {
-   background: orange; /* цвет зоны отслеживания */
-}
-
-*::-webkit-scrollbar-thumb {
-   background-color: blue; /* цвет бегунка */
-   border-radius: 20px; /* округлось бегунка */
-   border: 3px solid orange; /* отступ вокруг бегунка */
-}
 %yellow_button {
    display: inline-block;
    padding: 15px 60px;
@@ -38,17 +25,17 @@ html {
    color: #5b5b5b;
 }
 h1 {
-   font-size: 4rem;
+   font-size: clamp(2rem, 4vw, 4rem);
    font-weight: 700;
    color: #fff;
 }
 h2 {
-   font-size: 3rem;
+   font-size: clamp(2rem, 4vw, 3rem);
    font-weight: 700;
    color: #000000;
 }
 h3 {
-   font-size: 2rem;
+   font-size: clamp(1.5rem, 4vw, 2rem);
    font-weight: 600;
    color: #fff;
 }
@@ -58,7 +45,7 @@ h4 {
    font-weight: 600;
 }
 p {
-   font-size: 1.5rem;
+   font-size: clamp(0.8rem, 4vw, 1rem);
    margin-top: 5px;
    font-weight: 400;
 }
@@ -66,12 +53,12 @@ a {
    position: relative;
    text-decoration: none;
    color: #fff;
-   font-size: 1.25rem;
+   font-size: clamp(1rem, 4vw, 1.25rem);
    font-weight: 700;
    cursor: pointer;
 }
 li {
-   font-size: 1rem;
+   font-size: clamp(0.8rem, 4vw, 1rem);
    font-weight: 700;
 }
 .yellow_text {
@@ -86,12 +73,26 @@ li {
 }
 .card_block {
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
+   overflow-x: auto;
+   margin: auto 10px;
 }
 .block {
    max-width: 1200px;
    text-align: center;
    margin: 0 auto;
+   ::-webkit-scrollbar {
+      height: 1.5vw;
+      margin: 10px;
+   }
+   ::-webkit-scrollbar-track {
+      background: #d9d9d9;
+      border-radius: 29px;
+   }
+   ::-webkit-scrollbar-thumb {
+      background-color: #dba833;
+      border-radius: 29px;
+   }
 }
 
 .wrapper {
@@ -117,12 +118,8 @@ header {
    }
    .navbar {
       display: flex;
-      padding: 22px;
+      padding: clamp(1.25rem, 4vw, 1.4rem);
       justify-content: center;
-      ol {
-         display: flex;
-         justify-content: space-between;
-      }
       a:after {
          @extend %tdl_under;
       }
@@ -130,6 +127,11 @@ header {
       a:focus:after {
          width: 100%;
       }
+      ol {
+         display: flex;
+         justify-content: space-between;
+      }
+
       li {
          line-height: 30px;
          gap: 6px;
@@ -185,7 +187,6 @@ header {
    // Стили 1-го блока
    .product {
       max-width: 1920px;
-      position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
       .product_left {
@@ -225,7 +226,7 @@ header {
          width: 350px;
          height: 200px;
          background-color: rgba(44, 44, 44, 0.8);
-         padding: 100px 90px;
+         padding: clamp(3rem, 5vw + 1rem, 6.25rem);
 
          p {
             margin-top: 15px;
@@ -279,7 +280,7 @@ header {
       .card_block {
          justify-content: space-around;
          margin-top: 20px;
-         flex-wrap: nowrap;
+         overflow: unset;
          .card_gas_station {
             max-width: 350px;
          }
@@ -300,10 +301,7 @@ header {
       margin: 160px auto 0 auto;
       .card_block {
          margin-top: 30px;
-         justify-content: space-around;
-         gap: 43px;
-         flex-wrap: nowrap;
-         overflow-x: auto;
+         gap: 1.5vw;
       }
    }
 
@@ -315,8 +313,7 @@ header {
       padding: 50px 100px 80px 100px;
       background: radial-gradient(#f8f8f8 70%, #fff 20%);
       img {
-         width: 85%;
-         max-height: 72%;
+         width: 100%;
          margin-top: 25px;
       }
    }
@@ -326,10 +323,7 @@ header {
       margin-top: 80px;
       .card_block {
          margin-top: 20px;
-         justify-content: space-around;
-         gap: 43px;
-         flex-wrap: nowrap;
-         overflow-x: auto;
+         gap: 1.5vw;
       }
    }
 
@@ -382,8 +376,7 @@ header {
          flex-wrap: wrap;
          text-align: left;
          margin-top: 30px;
-         gap: 40px;
-         justify-content: center;
+         justify-content: space-evenly;
       }
       .news_card {
          border: 1px solid #000;
@@ -564,7 +557,7 @@ footer {
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr;
-   column-gap: 80px;
+   column-gap: 6vw;
    .offers {
       display: grid;
       grid-template-columns: 100px 400px;
@@ -660,20 +653,9 @@ footer {
    }
 }
 
+// Медиа запросы
+// <1200px
 @media (max-width: 1200px) {
-   h1 {
-      font-size: 3rem;
-   }
-   h2 {
-      font-size: 2.5rem;
-   }
-   h3 {
-      font-size: 1.5rem;
-   }
-   li {
-      font-size: 0.8rem;
-   }
-
    // Стили Header
    header {
       h2 {
@@ -682,14 +664,20 @@ footer {
       }
       .navbar {
          display: flex;
-         padding: 10px;
+
          align-items: center;
          justify-content: space-evenly;
+         a:after {
+            background-color: #272727;
+         }
+         a:last-child:after {
+            background-color: #dba833;
+         }
 
          ol {
             display: flex;
             justify-content: space-between;
-            gap: 1vw;
+            gap: 3.5vw;
          }
          li {
             line-height: 30px;
@@ -715,6 +703,7 @@ footer {
                display: flex;
                flex-direction: column;
             }
+
             li {
                color: #272727;
                font-size: 1.5rem;
@@ -755,6 +744,85 @@ footer {
             font-size: 1.5rem;
             color: #cecece;
             font-weight: 400;
+         }
+      }
+   }
+   .main {
+      .gas_station {
+         .card_block {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+         }
+         .scrollto {
+            display: none;
+         }
+      }
+      .manufacturers {
+         .card_block {
+            cursor: ew-resize;
+            padding-bottom: 12px;
+         }
+      }
+      .clients {
+         .card_block {
+            cursor: ew-resize;
+            padding-bottom: 12px;
+         }
+      }
+      .form {
+         form {
+            margin: 0 10px;
+         }
+      }
+   }
+   footer {
+      margin: 0 10px;
+   }
+}
+
+// <1060px
+@media (max-width: 1060px) {
+   .main {
+      .product {
+         grid-template-rows: 1fr 1fr 1fr;
+         .product_left {
+            display: flex;
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            background-size: 100%;
+            .card_left {
+               border-radius: 30px;
+            }
+         }
+         .product_right {
+            grid-row: 2;
+            display: flex;
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            background-size: 100%;
+            padding: 50px 0;
+            .card_right {
+               border-radius: 30px;
+            }
+         }
+         .product_bottom {
+            display: flex;
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            background-size: auto 100%;
+            padding: 50px 0;
+
+            .card_bottom {
+               border-radius: 30px;
+               grid-column: 2;
+            }
          }
       }
    }

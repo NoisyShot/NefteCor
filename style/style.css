@@ -1,18 +1,3 @@
-@charset "UTF-8";
-*::-webkit-scrollbar {
-  width: 12px; /* ширина всей полосы прокрутки */
-}
-
-*::-webkit-scrollbar-track {
-  background: orange; /* цвет зоны отслеживания */
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: blue; /* цвет бегунка */
-  border-radius: 20px; /* округлось бегунка */
-  border: 3px solid orange; /* отступ вокруг бегунка */
-}
-
 .main .news .all_news, .main .news .news_card .new_text a, .main .gas_station .block_center a, .main .product .card a, header .top a {
   display: inline-block;
   padding: 15px 60px;
@@ -42,19 +27,19 @@ html {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: clamp(2rem, 4vw, 4rem);
   font-weight: 700;
   color: #fff;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   color: #000000;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 600;
   color: #fff;
 }
@@ -66,7 +51,7 @@ h4 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: clamp(0.8rem, 4vw, 1rem);
   margin-top: 5px;
   font-weight: 400;
 }
@@ -75,13 +60,13 @@ a {
   position: relative;
   text-decoration: none;
   color: #fff;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 4vw, 1.25rem);
   font-weight: 700;
   cursor: pointer;
 }
 
 li {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 4vw, 1rem);
   font-weight: 700;
 }
 
@@ -100,13 +85,27 @@ li {
 
 .card_block {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin: auto 10px;
 }
 
 .block {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
+}
+.block ::-webkit-scrollbar {
+  height: 1.5vw;
+  margin: 10px;
+}
+.block ::-webkit-scrollbar-track {
+  background: #d9d9d9;
+  border-radius: 29px;
+}
+.block ::-webkit-scrollbar-thumb {
+  background-color: #dba833;
+  border-radius: 29px;
 }
 
 .wrapper {
@@ -129,16 +128,16 @@ header h2 {
 }
 header .navbar {
   display: flex;
-  padding: 22px;
+  padding: clamp(1.25rem, 4vw, 1.4rem);
   justify-content: center;
-}
-header .navbar ol {
-  display: flex;
-  justify-content: space-between;
 }
 header .navbar a:hover:after,
 header .navbar a:focus:after {
   width: 100%;
+}
+header .navbar ol {
+  display: flex;
+  justify-content: space-between;
 }
 header .navbar li {
   line-height: 30px;
@@ -184,7 +183,6 @@ header .top p {
 
 .main .product {
   max-width: 1920px;
-  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -224,7 +222,7 @@ header .top p {
   width: 350px;
   height: 200px;
   background-color: rgba(44, 44, 44, 0.8);
-  padding: 100px 90px;
+  padding: clamp(3rem, 5vw + 1rem, 6.25rem);
 }
 .main .product .card p {
   margin-top: 15px;
@@ -270,7 +268,7 @@ header .top p {
 .main .gas_station .card_block {
   justify-content: space-around;
   margin-top: 20px;
-  flex-wrap: nowrap;
+  overflow: unset;
 }
 .main .gas_station .card_block .card_gas_station {
   max-width: 350px;
@@ -288,10 +286,7 @@ header .top p {
 }
 .main .manufacturers .card_block {
   margin-top: 30px;
-  justify-content: space-around;
-  gap: 43px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  gap: 1.5vw;
 }
 .main .geography {
   max-width: 1400px;
@@ -301,8 +296,7 @@ header .top p {
   background: radial-gradient(#f8f8f8 70%, #fff 20%);
 }
 .main .geography img {
-  width: 85%;
-  max-height: 72%;
+  width: 100%;
   margin-top: 25px;
 }
 .main .clients {
@@ -310,10 +304,7 @@ header .top p {
 }
 .main .clients .card_block {
   margin-top: 20px;
-  justify-content: space-around;
-  gap: 43px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  gap: 1.5vw;
 }
 .main .reviews {
   margin-top: 120px;
@@ -362,8 +353,7 @@ header .top p {
   flex-wrap: wrap;
   text-align: left;
   margin-top: 30px;
-  gap: 40px;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .main .news .news_card {
   border: 1px solid #000;
@@ -537,8 +527,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  -moz-column-gap: 80px;
-       column-gap: 80px;
+  -moz-column-gap: 6vw;
+       column-gap: 6vw;
 }
 footer .offers {
   display: grid;
@@ -633,32 +623,25 @@ footer a {
 }
 
 @media (max-width: 1200px) {
-  h1 {
-    font-size: 3rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  li {
-    font-size: 0.8rem;
-  }
   header h2 {
     margin-top: 34vw;
     padding-bottom: 2vw;
   }
   header .navbar {
     display: flex;
-    padding: 10px;
     align-items: center;
     justify-content: space-evenly;
+  }
+  header .navbar a:after {
+    background-color: #272727;
+  }
+  header .navbar a:last-child:after {
+    background-color: #dba833;
   }
   header .navbar ol {
     display: flex;
     justify-content: space-between;
-    gap: 1vw;
+    gap: 3.5vw;
   }
   header .navbar li {
     line-height: 30px;
@@ -714,5 +697,69 @@ footer a {
     font-size: 1.5rem;
     color: #cecece;
     font-weight: 400;
+  }
+  .main .gas_station .card_block {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .main .gas_station .scrollto {
+    display: none;
+  }
+  .main .manufacturers .card_block {
+    cursor: ew-resize;
+    padding-bottom: 12px;
+  }
+  .main .clients .card_block {
+    cursor: ew-resize;
+    padding-bottom: 12px;
+  }
+  .main .form form {
+    margin: 0 10px;
+  }
+  footer {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 1060px) {
+  .main .product {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .main .product .product_left {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-size: 100%;
+  }
+  .main .product .product_left .card_left {
+    border-radius: 30px;
+  }
+  .main .product .product_right {
+    grid-row: 2;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    padding: 50px 0;
+  }
+  .main .product .product_right .card_right {
+    border-radius: 30px;
+  }
+  .main .product .product_bottom {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-size: auto 100%;
+    padding: 50px 0;
+  }
+  .main .product .product_bottom .card_bottom {
+    border-radius: 30px;
+    grid-column: 2;
   }
 }/*# sourceMappingURL=style.css.map */
