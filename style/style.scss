@@ -1,6 +1,5 @@
 %yellow_button {
    display: inline-block;
-   padding: 15px 60px;
    border-radius: 5px;
    background: #dba833;
 }
@@ -25,17 +24,17 @@ html {
    color: #5b5b5b;
 }
 h1 {
-   font-size: clamp(2rem, 4vw, 4rem);
+   font-size: clamp(2.25rem, 3vw, 4rem);
    font-weight: 700;
    color: #fff;
 }
 h2 {
-   font-size: clamp(2rem, 4vw, 3rem);
+   font-size: clamp(2rem, 3vw, 3rem);
    font-weight: 700;
    color: #000000;
 }
 h3 {
-   font-size: clamp(1.5rem, 4vw, 2rem);
+   font-size: clamp(1.5rem, 3vw, 2rem);
    font-weight: 600;
    color: #fff;
 }
@@ -45,7 +44,7 @@ h4 {
    font-weight: 600;
 }
 p {
-   font-size: clamp(0.8rem, 4vw, 1rem);
+   font-size: clamp(0.8rem, 3vw, 1rem);
    margin-top: 5px;
    font-weight: 400;
 }
@@ -53,12 +52,12 @@ a {
    position: relative;
    text-decoration: none;
    color: #fff;
-   font-size: clamp(1rem, 4vw, 1.25rem);
+   font-size: clamp(1rem, 3vw, 1.25rem);
    font-weight: 700;
    cursor: pointer;
 }
 li {
-   font-size: clamp(0.8rem, 4vw, 1rem);
+   font-size: clamp(0.8rem, 3vw, 1rem);
    font-weight: 700;
 }
 .yellow_text {
@@ -71,6 +70,7 @@ li {
    writing-mode: vertical-rl;
    transform: rotate(180deg);
 }
+//   overflow-x: auto;
 .card_block {
    display: flex;
    flex-wrap: nowrap;
@@ -78,7 +78,7 @@ li {
    margin: auto 10px;
 }
 .block {
-   max-width: 1200px;
+   width: clamp(340px, 1920px, 1200px);
    text-align: center;
    margin: 0 auto;
    ::-webkit-scrollbar {
@@ -87,17 +87,17 @@ li {
    }
    ::-webkit-scrollbar-track {
       background: #d9d9d9;
-      border-radius: 29px;
+      border-radius: 30px;
    }
    ::-webkit-scrollbar-thumb {
       background-color: #dba833;
-      border-radius: 29px;
+      border-radius: 30px;
    }
 }
 
 .wrapper {
    max-width: 1920px;
-   min-width: 720px;
+   min-width: 360px;
    margin: 0 auto;
    min-height: 100%;
 }
@@ -107,18 +107,19 @@ header {
    background:
       url(../image/Main/Logistic.png) no-repeat,
       linear-gradient(180deg, #000000 3%, rgba(0, 0, 0, 0.09) 34%, rgba(0, 0, 0, 0) 100%),
+      linear-gradient(180deg, rgba(44, 44, 44, 0) 80%, #2c2c2c 105%),
       url(../image/Main/Logo.png) no-repeat;
    background-position: center;
    max-height: 1142px;
    h2 {
       color: #fff;
       text-align: center;
-      margin-top: 300px;
+      margin-top: clamp(30px, 15vw, 300px);
       padding-bottom: 40px;
    }
    .navbar {
       display: flex;
-      padding: clamp(1.25rem, 4vw, 1.4rem);
+      padding-top: clamp(1.25rem, 4vw, 1.4rem);
       justify-content: center;
       a:after {
          @extend %tdl_under;
@@ -131,9 +132,8 @@ header {
          display: flex;
          justify-content: space-between;
       }
-
       li {
-         line-height: 30px;
+         line-height: 24px;
          gap: 6px;
          display: flex;
       }
@@ -142,42 +142,50 @@ header {
          display: none;
       }
       .navbar_content {
-         padding: 9px 0 9px 34px;
+         padding-left: clamp(0.75rem, 2vw, 2rem);
       }
       .navbar_list {
          padding: 5px 0;
          border: 2px dashed #4f4f4f;
          border-left: 0;
          border-right: 0;
-         min-width: 1044px;
-         font-size: 1rem;
-         font-weight: 700;
+         ol {
+            justify-content: space-around;
+            gap: clamp(1rem, 2vw, 2rem);
+         }
       }
       .navbar_contacts {
          color: #b6b6b6;
-         font-size: 1rem;
          font-weight: 400;
-         margin-top: 22px;
+         margin-top: 16px;
       }
    }
    .top {
-      padding: 90px 70px;
-      max-width: 1006px;
+      padding: clamp(0px, 10vw, 100px);
+      max-width: 1000px;
       text-align: center;
+      margin: 0 auto;
+      margin-top: clamp(0px, 5vw - 1rem, 100px);
+      border-radius: 50px;
       margin: 170px auto 0 auto;
-      background: radial-gradient(circle 208px at 150px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-         radial-gradient(circle 208px at 300px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-         radial-gradient(circle 208px at 450px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-         radial-gradient(circle 208px at 600px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-         radial-gradient(circle 208px at 750px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-         radial-gradient(circle 208px at 900px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0));
-      a {
-         @extend %yellow_button;
-         margin-top: 2vw;
-      }
+      filter: drop-shadow(0 0 2rem rgb(0, 0, 0));
+      background: radial-gradient(circle 200px at 150px, rgba(0, 0, 0, 0.589) 10%, rgba(0, 0, 0, 0) 80%),
+         radial-gradient(circle 200px at 300px, rgba(0, 0, 0, 0.589) 10%, rgba(0, 0, 0, 0) 80%),
+         radial-gradient(circle 200px at 450px, rgba(0, 0, 0, 0.589) 10%, rgba(0, 0, 0, 0) 80%),
+         radial-gradient(circle 200px at 600px, rgba(0, 0, 0, 0.589) 10%, rgba(0, 0, 0, 0) 80%),
+         radial-gradient(circle 200px at 750px, rgba(0, 0, 0, 0.589) 10%, rgba(0, 0, 0, 0) 80%),
+         radial-gradient(circle 200px at 900px, rgba(0, 0, 0, 0.589) 10%, rgba(0, 0, 0, 0) 80%);
       p {
          color: #cecece;
-         margin-top: 15px;
+         font-size: clamp(1rem, 2vw, 1.5rem);
+         margin-top: clamp(0.6rem, 2vw, 1rem);
+      }
+      a {
+         @extend %yellow_button;
+         margin-top: clamp(1rem, 2vw, 1.25rem);
+         padding: 15px;
+         padding-left: clamp(40px, 5vw, 60px);
+         padding-right: clamp(40px, 5vw, 60px);
       }
    }
 }
@@ -186,12 +194,11 @@ header {
 .main {
    // Стили 1-го блока
    .product {
-      max-width: 1920px;
+      width: auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
       .product_left {
          background: url(../image/Main/Trailer_Flammable.png) no-repeat right;
-         height: 800px;
          display: grid;
          grid-template-columns: 1fr 1fr;
          grid-template-rows: 1fr 1fr;
@@ -204,7 +211,6 @@ header {
       }
       .product_right {
          background: url(../image/Main/Tanker.png) no-repeat left;
-         height: 800px;
          .card_right {
             border-bottom-right-radius: 30px;
          }
@@ -212,8 +218,7 @@ header {
       .product_bottom {
          grid-column: 1/3;
          background: url(../image/Main/Radiator.png) no-repeat top;
-
-         height: 400px;
+         background-size: auto 100%;
          display: grid;
          grid-template-columns: 1fr 1fr;
          .card_bottom {
@@ -223,21 +228,20 @@ header {
       }
       .card {
          text-align: left;
-         width: 350px;
-         height: 200px;
+         max-width: 350px;
          background-color: rgba(44, 44, 44, 0.8);
-         padding: clamp(3rem, 5vw + 1rem, 6.25rem);
-
+         padding: clamp(2rem, 5vw, 6.25rem);
          p {
-            margin-top: 15px;
+            margin-top: clamp(0.33rem, 1vw, 1rem);
             color: #cecece;
-            font-size: 1.25rem;
-            font-weight: 400;
+            font-size: clamp(1rem, 3vw, 1.25rem);
          }
          a {
             @extend %yellow_button;
-            padding: 13px 118px;
-            margin-top: 30px;
+            padding: 13px;
+            padding-left: clamp(4rem, 10vw, 7.5rem);
+            padding-right: clamp(4rem, 10vw, 7.5rem);
+            margin-top: clamp(1rem, 3vw, 2rem);
          }
       }
    }
@@ -650,180 +654,5 @@ footer {
       color: #5b5b5b;
       font-size: 1rem;
       font-weight: 400;
-   }
-}
-
-// Медиа запросы
-// <1200px
-@media (max-width: 1200px) {
-   // Стили Header
-   header {
-      h2 {
-         margin-top: 34vw;
-         padding-bottom: 2vw;
-      }
-      .navbar {
-         display: flex;
-
-         align-items: center;
-         justify-content: space-evenly;
-         a:after {
-            background-color: #272727;
-         }
-         a:last-child:after {
-            background-color: #dba833;
-         }
-
-         ol {
-            display: flex;
-            justify-content: space-between;
-            gap: 3.5vw;
-         }
-         li {
-            line-height: 30px;
-            gap: 6px;
-            display: flex;
-         }
-         .navbar_content {
-            padding: 0;
-         }
-         .navbar_list,
-         .floating_block {
-            display: none;
-         }
-
-         .floating_block {
-            background: #fff;
-            padding: 80px 100px 80px 15px;
-            z-index: 1;
-            position: absolute;
-            top: 0;
-            right: 0;
-            ol {
-               display: flex;
-               flex-direction: column;
-            }
-
-            li {
-               color: #272727;
-               font-size: 1.5rem;
-            }
-         }
-
-         .navbar_contacts {
-            margin-top: 0px;
-         }
-
-         .show {
-            display: block;
-            transition: 1s;
-         }
-      }
-
-      .top {
-         padding: 90px 70px;
-         max-width: 1006px;
-         text-align: center;
-         margin: 170px auto 0 auto;
-         background: radial-gradient(circle 190px at 150px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-            radial-gradient(circle 190px at 300px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-            radial-gradient(circle 190px at 450px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-            radial-gradient(circle 190px at 600px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-            radial-gradient(circle 190px at 750px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0)),
-            radial-gradient(circle 190px at 900px, rgba(0, 0, 0, 0.589) 30%, rgba(0, 0, 0, 0));
-         h4 {
-            margin-top: 15px;
-         }
-         a {
-            @extend %yellow_button;
-            min-width: 168px;
-            height: 24px;
-            margin-top: 20px;
-         }
-         p {
-            font-size: 1.5rem;
-            color: #cecece;
-            font-weight: 400;
-         }
-      }
-   }
-   .main {
-      .gas_station {
-         .card_block {
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-         }
-         .scrollto {
-            display: none;
-         }
-      }
-      .manufacturers {
-         .card_block {
-            cursor: ew-resize;
-            padding-bottom: 12px;
-         }
-      }
-      .clients {
-         .card_block {
-            cursor: ew-resize;
-            padding-bottom: 12px;
-         }
-      }
-      .form {
-         form {
-            margin: 0 10px;
-         }
-      }
-   }
-   footer {
-      margin: 0 10px;
-   }
-}
-
-// <1060px
-@media (max-width: 1060px) {
-   .main {
-      .product {
-         grid-template-rows: 1fr 1fr 1fr;
-         .product_left {
-            display: flex;
-            width: 100vw;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 0;
-            background-size: 100%;
-            .card_left {
-               border-radius: 30px;
-            }
-         }
-         .product_right {
-            grid-row: 2;
-            display: flex;
-            width: 100vw;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-            background-size: 100%;
-            padding: 50px 0;
-            .card_right {
-               border-radius: 30px;
-            }
-         }
-         .product_bottom {
-            display: flex;
-            width: 100vw;
-            height: auto;
-            justify-content: center;
-            align-items: center;
-            background-size: auto 100%;
-            padding: 50px 0;
-
-            .card_bottom {
-               border-radius: 30px;
-               grid-column: 2;
-            }
-         }
-      }
    }
 }
