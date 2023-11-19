@@ -802,7 +802,7 @@ footer a {
     justify-content: center;
     align-items: center;
     padding: 50px 0;
-    background-size: auto 100%;
+    background-size: 100% auto;
   }
   .main .product .product_left .card_left {
     border-radius: 30px;
@@ -940,5 +940,10 @@ footer a {
     flex-direction: column;
     row-gap: 15px;
     width: auto;
+  }
+}
+@media (max-width: 403px) {
+  .main .product .product_left {
+    background-size: auto 100%;
   }
 }/*# sourceMappingURL=style.css.map */
