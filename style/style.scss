@@ -81,7 +81,7 @@ li {
    overflow-x: auto;
 }
 .block {
-   width: clamp(340px, 95vw, 1200px);
+   width: clamp(340px, 90vw, 1200px);
    text-align: center;
    margin: 0 auto;
    ::-webkit-scrollbar {
@@ -160,6 +160,9 @@ header {
          color: #b6b6b6;
          font-weight: 400;
          margin-top: 16px;
+         p {
+            margin: 0;
+         }
       }
    }
    .top {
@@ -213,6 +216,9 @@ header {
       }
       .product_right {
          background: url(../image/Main/Tanker.png) no-repeat left;
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr;
          .card_right {
             border-bottom-right-radius: 30px;
          }
@@ -274,6 +280,22 @@ header {
             justify-content: space-evenly;
             margin-top: 20px;
             overflow: unset;
+            a {
+               border: none;
+               padding: 0;
+               height: 200px;
+               width: clamp(300px, 20vw, 350px);
+               transform: none;
+            }
+            .card_gas_station:nth-child(1) a {
+               background: url(../image/Mini\ Gas\ Station\ Kit/Mini_GS_Kit-1.png) no-repeat;
+            }
+            .card_gas_station:nth-child(2) a {
+               background: url(../image/Mini\ Gas\ Station\ Kit/Mini_GS_Kit-2.png) no-repeat;
+            }
+            .card_gas_station:nth-child(3) a {
+               background: url(../image/Mini\ Gas\ Station\ Kit/Mini_GS_Kit-3.png) no-repeat;
+            }
             h4 {
                margin-top: clamp(10px, vw, 20px);
             }
@@ -317,7 +339,6 @@ header {
    .geography {
       margin: auto;
       margin-top: clamp(2.25rem, 15vw, 7rem);
-      padding: clamp(3rem, 15vw, 6rem);
       background: radial-gradient(#f8f8f8 70%, #fff 20%);
       h2 {
          font-size: clamp(1.5rem, 4vw, 3rem);
@@ -365,7 +386,7 @@ header {
          .vertical_text {
             text-align: center;
             max-height: 230px;
-            margin: 46px 15px 64px auto;
+            margin: 46px 15px 64px 0;
          }
       }
    }
@@ -401,7 +422,7 @@ header {
             padding: 20px;
             max-width: 270px;
             h3 {
-               font-size: clmp(1rem, 4vw, 1.25rem);
+               font-size: clamp(1rem, 4vw, 1.25rem);
                color: black;
             }
             a {
@@ -422,7 +443,7 @@ header {
          @extend .yellow_text;
          background: #fff;
          border: 2px solid #dba833;
-         font-size: clmp(1rem, 4vw, 1.25rem);
+         font-size: clamp(1rem, 4vw, 1.25rem);
       }
    }
 
@@ -577,7 +598,7 @@ footer {
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr;
-   column-gap: 6vw;
+   justify-content: space-evenly;
    row-gap: 20px;
    .offers {
       display: grid;
@@ -606,7 +627,7 @@ footer {
    .menu ol {
       display: grid;
       height: 100%;
-      grid-template-columns: repeat(3, 175px);
+      grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(3, 1fr);
       justify-content: space-evenly;
       align-items: center;
@@ -695,5 +716,283 @@ footer {
       color: #5b5b5b;
       font-size: 1rem;
       font-weight: 400;
+   }
+}
+
+// <1200px
+@media (max-width: 1199px) {
+   // Стили Header
+   header {
+      .navbar {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         a:after {
+            background-color: #272727;
+         }
+         a:last-child:after {
+            background-color: #dba833;
+         }
+         ol {
+            gap: 3.5vw;
+         }
+         li {
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+         }
+         .navbar_content {
+            padding: 0;
+         }
+         .navbar_list,
+         .floating_block {
+            display: none;
+         }
+         .floating_block {
+            background: #fff;
+            padding: 80px 101px 80px 15px;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            ol {
+               display: flex;
+               flex-direction: column;
+            }
+            li {
+               color: #272727;
+               font-size: 1.5rem;
+            }
+         }
+         .navbar_contacts {
+            margin-top: 0px;
+         }
+         .show {
+            display: block;
+         }
+      }
+   }
+   .main {
+      .gas_station {
+         margin-left: 10px;
+         margin-right: 10px;
+         display: block;
+         .card_block {
+            flex-wrap: nowrap;
+         }
+         //заправка адаптив карточек
+         .scrollto {
+            display: none;
+         }
+      }
+      .manufacturers,
+      .clients {
+         .card_block {
+            cursor: ew-resize;
+            padding-bottom: 12px;
+         }
+      }
+      .reviews {
+         margin-left: 10px;
+         margin-right: 10px;
+      }
+      .form {
+         form {
+            margin: 0 10px;
+         }
+      }
+   }
+   footer {
+      margin: 0 10px;
+      .menu ol {
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(3, 1fr);
+         li:nth-child(7) {
+            grid-column: 1/3;
+            grid-row: 4;
+         }
+      }
+   }
+}
+
+// <1024px
+@media (max-width: 1023px) {
+   header {
+      .navbar_contacts ol {
+         flex-direction: column;
+         gap: 0;
+      }
+   }
+   .main {
+      .product {
+         grid-template-rows: 1fr 1fr 1fr;
+         .card {
+            text-align: center;
+         }
+
+         .product_left {
+            display: flex;
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            background-size: auto 100%;
+            .card_left {
+               border-radius: 30px;
+            }
+         }
+         .product_right {
+            background: url(../image/Main/Tanker1.png) no-repeat top;
+            background-size: auto 100%;
+            grid-row: 2;
+            display: flex;
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 0;
+            .card_right {
+               border-radius: 30px;
+            }
+         }
+         .product_bottom {
+            display: flex;
+            width: 100vw;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            background-size: auto 100%;
+            padding: 50px 0;
+
+            .card_bottom {
+               border-radius: 30px;
+               grid-column: 2;
+            }
+         }
+      }
+      .gas_station {
+         .card_block {
+            flex-direction: column;
+            .card_gas_station a {
+               width: clamp(300px, 50vw, 350px);
+            }
+            .card_gas_station:nth-child(1) a {
+               margin-top: 20px;
+            }
+         }
+      }
+      .reviews {
+         overflow-x: auto;
+         h3 {
+            text-align: left;
+            margin-top: clamp(20px, 4vw, 50px);
+         }
+         p {
+            font-weight: 500;
+            text-align: left;
+            max-width: 750px;
+         }
+         img {
+            display: none;
+         }
+         .reviews_card_block {
+            width: 1200px;
+            display: flex;
+         }
+         .reviews_card {
+            max-height: 250px;
+            margin-left: 10px;
+            margin-right: 10px;
+            .review p,
+            h3 {
+               text-align: center;
+            }
+            h3 {
+               margin-top: 20px;
+            }
+            .vertical_text {
+               display: none;
+            }
+         }
+      }
+      .news {
+         .news_card:nth-child(-n + 1) {
+            display: none;
+         }
+      }
+      .form {
+         form {
+            display: flex;
+            flex-direction: column;
+            width: 60vw;
+            text-align: center;
+         }
+         input {
+            filter: none;
+         }
+      }
+      .team {
+         background-image: url(../image/Main/Our_Team/BackGr.svg);
+         background-position: center;
+      }
+   }
+}
+
+// <768px
+@media (max-width: 767px) {
+   .block {
+      width: auto;
+   }
+   .main {
+      .review {
+         width: 75vw;
+      }
+      .news {
+         .news_card:nth-child(-n + 2) {
+            display: none;
+         }
+      }
+      .form {
+         form {
+            display: flex;
+            flex-direction: column;
+            width: 75vw;
+            text-align: left;
+         }
+         input {
+            filter: none;
+         }
+      }
+      .team {
+         .block_employees {
+            display: flex;
+            flex-direction: column;
+         }
+      }
+   }
+   footer {
+      display: flex;
+      flex-direction: column;
+      .offers {
+         justify-items: center;
+         grid-template-columns: auto auto;
+         .line_block {
+            grid-column: 2/3;
+         }
+      }
+      .menu ol {
+         row-gap: 15px;
+      }
+      .copyright {
+         align-items: flex-start;
+         flex-direction: column-reverse;
+         row-gap: 15px;
+         .copyright_line {
+            flex-direction: column;
+            row-gap: 15px;
+            width: auto;
+         }
+      }
    }
 }

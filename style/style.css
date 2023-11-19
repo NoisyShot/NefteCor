@@ -95,7 +95,7 @@ li {
 }
 
 .block {
-  width: clamp(340px, 95vw, 1200px);
+  width: clamp(340px, 90vw, 1200px);
   text-align: center;
   margin: 0 auto;
 }
@@ -170,6 +170,9 @@ header .navbar .navbar_contacts {
   font-weight: 400;
   margin-top: 16px;
 }
+header .navbar .navbar_contacts p {
+  margin: 0;
+}
 header .top {
   padding: clamp(0px, 10vw, 100px);
   max-width: 1000px;
@@ -212,6 +215,9 @@ header .top a {
 }
 .main .product .product_right {
   background: url(../image/Main/Tanker.png) no-repeat left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 .main .product .product_right .card_right {
   border-bottom-right-radius: 30px;
@@ -272,6 +278,22 @@ header .top a {
   margin-top: 20px;
   overflow: unset;
 }
+.main .gas_station .block_center .card_block a {
+  border: none;
+  padding: 0;
+  height: 200px;
+  width: clamp(300px, 20vw, 350px);
+  transform: none;
+}
+.main .gas_station .block_center .card_block .card_gas_station:nth-child(1) a {
+  background: url(../image/Mini\ Gas\ Station\ Kit/Mini_GS_Kit-1.png) no-repeat;
+}
+.main .gas_station .block_center .card_block .card_gas_station:nth-child(2) a {
+  background: url(../image/Mini\ Gas\ Station\ Kit/Mini_GS_Kit-2.png) no-repeat;
+}
+.main .gas_station .block_center .card_block .card_gas_station:nth-child(3) a {
+  background: url(../image/Mini\ Gas\ Station\ Kit/Mini_GS_Kit-3.png) no-repeat;
+}
 .main .gas_station .block_center .card_block h4 {
   margin-top: clamp(10px, vw, 20px);
 }
@@ -309,7 +331,6 @@ header .top a {
 .main .geography {
   margin: auto;
   margin-top: clamp(2.25rem, 15vw, 7rem);
-  padding: clamp(3rem, 15vw, 6rem);
   background: radial-gradient(#f8f8f8 70%, #fff 20%);
 }
 .main .geography h2 {
@@ -357,7 +378,7 @@ header .top a {
 .main .reviews .reviews_card .vertical_text {
   text-align: center;
   max-height: 230px;
-  margin: 46px 15px 64px auto;
+  margin: 46px 15px 64px 0;
 }
 .main .news {
   margin-top: clamp(60px, 5vw, 80px);
@@ -392,7 +413,7 @@ header .top a {
   max-width: 270px;
 }
 .main .news .news_card .new_text h3 {
-  font-size: clmp(1rem, 4vw, 1.25rem);
+  font-size: clamp(1rem, 4vw, 1.25rem);
   color: black;
 }
 .main .news .news_card .new_text a {
@@ -407,7 +428,7 @@ header .top a {
   padding: 10px 60px;
   background: #fff;
   border: 2px solid #dba833;
-  font-size: clmp(1rem, 4vw, 1.25rem);
+  font-size: clamp(1rem, 4vw, 1.25rem);
 }
 .main .form {
   margin-top: clamp(60px, 6vw, 100px);
@@ -559,8 +580,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  -moz-column-gap: 6vw;
-       column-gap: 6vw;
+  justify-content: space-evenly;
   row-gap: 20px;
 }
 footer .offers {
@@ -590,7 +610,7 @@ footer .offers .line_block {
 footer .menu ol {
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(3, 175px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   justify-content: space-evenly;
   align-items: center;
@@ -678,4 +698,247 @@ footer a {
   color: #5b5b5b;
   font-size: 1rem;
   font-weight: 400;
+}
+
+@media (max-width: 1199px) {
+  header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  header .navbar a:after {
+    background-color: #272727;
+  }
+  header .navbar a:last-child:after {
+    background-color: #dba833;
+  }
+  header .navbar ol {
+    gap: 3.5vw;
+  }
+  header .navbar li {
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  header .navbar .navbar_content {
+    padding: 0;
+  }
+  header .navbar .navbar_list,
+  header .navbar .floating_block {
+    display: none;
+  }
+  header .navbar .floating_block {
+    background: #fff;
+    padding: 80px 101px 80px 15px;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  header .navbar .floating_block ol {
+    display: flex;
+    flex-direction: column;
+  }
+  header .navbar .floating_block li {
+    color: #272727;
+    font-size: 1.5rem;
+  }
+  header .navbar .navbar_contacts {
+    margin-top: 0px;
+  }
+  header .navbar .show {
+    display: block;
+  }
+  .main .gas_station {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: block;
+  }
+  .main .gas_station .card_block {
+    flex-wrap: nowrap;
+  }
+  .main .gas_station .scrollto {
+    display: none;
+  }
+  .main .manufacturers .card_block,
+  .main .clients .card_block {
+    cursor: ew-resize;
+    padding-bottom: 12px;
+  }
+  .main .reviews {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .main .form form {
+    margin: 0 10px;
+  }
+  footer {
+    margin: 0 10px;
+  }
+  footer .menu ol {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  footer .menu ol li:nth-child(7) {
+    grid-column: 1/3;
+    grid-row: 4;
+  }
+}
+@media (max-width: 1023px) {
+  header .navbar_contacts ol {
+    flex-direction: column;
+    gap: 0;
+  }
+  .main .product {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .main .product .card {
+    text-align: center;
+  }
+  .main .product .product_left {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-size: auto 100%;
+  }
+  .main .product .product_left .card_left {
+    border-radius: 30px;
+  }
+  .main .product .product_right {
+    background: url(../image/Main/Tanker1.png) no-repeat top;
+    background-size: auto 100%;
+    grid-row: 2;
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+  }
+  .main .product .product_right .card_right {
+    border-radius: 30px;
+  }
+  .main .product .product_bottom {
+    display: flex;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-size: auto 100%;
+    padding: 50px 0;
+  }
+  .main .product .product_bottom .card_bottom {
+    border-radius: 30px;
+    grid-column: 2;
+  }
+  .main .gas_station .card_block {
+    flex-direction: column;
+  }
+  .main .gas_station .card_block .card_gas_station a {
+    width: clamp(300px, 50vw, 350px);
+  }
+  .main .gas_station .card_block .card_gas_station:nth-child(1) a {
+    margin-top: 20px;
+  }
+  .main .reviews {
+    overflow-x: auto;
+  }
+  .main .reviews h3 {
+    text-align: left;
+    margin-top: clamp(20px, 4vw, 50px);
+  }
+  .main .reviews p {
+    font-weight: 500;
+    text-align: left;
+    max-width: 750px;
+  }
+  .main .reviews img {
+    display: none;
+  }
+  .main .reviews .reviews_card_block {
+    width: 1200px;
+    display: flex;
+  }
+  .main .reviews .reviews_card {
+    max-height: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .main .reviews .reviews_card .review p,
+  .main .reviews .reviews_card h3 {
+    text-align: center;
+  }
+  .main .reviews .reviews_card h3 {
+    margin-top: 20px;
+  }
+  .main .reviews .reviews_card .vertical_text {
+    display: none;
+  }
+  .main .news .news_card:nth-child(-n+1) {
+    display: none;
+  }
+  .main .form form {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    text-align: center;
+  }
+  .main .form input {
+    filter: none;
+  }
+  .main .team {
+    background-image: url(../image/Main/Our_Team/BackGr.svg);
+    background-position: center;
+  }
+}
+@media (max-width: 767px) {
+  .block {
+    width: auto;
+  }
+  .main .review {
+    width: 75vw;
+  }
+  .main .news .news_card:nth-child(-n+2) {
+    display: none;
+  }
+  .main .form form {
+    display: flex;
+    flex-direction: column;
+    width: 75vw;
+    text-align: left;
+  }
+  .main .form input {
+    filter: none;
+  }
+  .main .team .block_employees {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .offers {
+    justify-items: center;
+    grid-template-columns: auto auto;
+  }
+  footer .offers .line_block {
+    grid-column: 2/3;
+  }
+  footer .menu ol {
+    row-gap: 15px;
+  }
+  footer .copyright {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    row-gap: 15px;
+  }
+  footer .copyright .copyright_line {
+    flex-direction: column;
+    row-gap: 15px;
+    width: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
