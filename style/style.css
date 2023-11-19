@@ -165,6 +165,11 @@ header .navbar .navbar_list ol {
   justify-content: space-around;
   gap: clamp(1rem, 2vw, 2rem);
 }
+header .navbar .navbar_list ol li:last-child a {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 header .navbar .navbar_contacts {
   color: #b6b6b6;
   font-weight: 400;
@@ -563,7 +568,7 @@ header .top a {
   color: #fff;
   font-weight: 700;
 }
-.main .team .block_employees p[type=tel] {
+.main .team .block_employees p:last-child {
   margin-top: 10px;
   color: #b9b9b9;
 }
@@ -739,9 +744,16 @@ footer a {
     display: flex;
     flex-direction: column;
   }
-  header .navbar .floating_block li {
+  header .navbar .floating_block li a {
     color: #272727;
     font-size: 1.5rem;
+  }
+  header .navbar .floating_block li:last-child a {
+    color: #dba833;
+    font-size: 1.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
   }
   header .navbar .navbar_contacts {
     margin-top: 0px;

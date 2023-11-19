@@ -154,6 +154,11 @@ header {
          ol {
             justify-content: space-around;
             gap: clamp(1rem, 2vw, 2rem);
+            li:last-child a {
+               align-items: center;
+               display: flex;
+               justify-content: center;
+            }
          }
       }
       .navbar_contacts {
@@ -575,7 +580,7 @@ header {
             color: #fff;
             font-weight: 700;
          }
-         p[type="tel"] {
+         p:last-child {
             margin-top: 10px;
             color: #b9b9b9;
          }
@@ -759,9 +764,16 @@ footer {
                display: flex;
                flex-direction: column;
             }
-            li {
+            li a {
                color: #272727;
                font-size: 1.5rem;
+            }
+            li:last-child a {
+               color: #dba833;
+               font-size: 1.5rem;
+               align-items: center;
+               display: flex;
+               justify-content: center;
             }
          }
          .navbar_contacts {
