@@ -123,6 +123,7 @@ header {
       display: flex;
       padding-top: clamp(1.25rem, 4vw, 1.4rem);
       justify-content: center;
+      margin: 0 10px;
       a:after {
          @extend %tdl_under;
       }
@@ -155,9 +156,10 @@ header {
             justify-content: space-around;
             gap: clamp(1rem, 2vw, 2rem);
             li:last-child a {
-               align-items: center;
+               align-items: flex-end;
                display: flex;
                justify-content: center;
+               height: 100%;
             }
          }
       }
@@ -167,6 +169,7 @@ header {
          margin-top: 16px;
          p {
             margin: 0;
+            width: 100%;
          }
       }
    }

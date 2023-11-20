@@ -134,6 +134,7 @@ header .navbar {
   display: flex;
   padding-top: clamp(1.25rem, 4vw, 1.4rem);
   justify-content: center;
+  margin: 0 10px;
 }
 header .navbar a:hover:after,
 header .navbar a:focus:after {
@@ -166,9 +167,10 @@ header .navbar .navbar_list ol {
   gap: clamp(1rem, 2vw, 2rem);
 }
 header .navbar .navbar_list ol li:last-child a {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 header .navbar .navbar_contacts {
   color: #b6b6b6;
@@ -177,6 +179,7 @@ header .navbar .navbar_contacts {
 }
 header .navbar .navbar_contacts p {
   margin: 0;
+  width: 100%;
 }
 header .top {
   padding: clamp(0px, 10vw, 100px);
