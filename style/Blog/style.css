@@ -170,6 +170,8 @@ header .navbar .navbar_list ol li:last-child a {
   align-items: flex-end;
   display: flex;
   justify-content: center;
+}
+header .navbar .navbar_list ol li:last-child a img {
   height: 100%;
 }
 header .navbar .navbar_contacts {
@@ -874,7 +876,7 @@ footer a {
     display: none;
   }
   .main .reviews .reviews_card_block {
-    width: 1200px;
+    width: 150vw;
     display: flex;
   }
   .main .reviews .reviews_card {

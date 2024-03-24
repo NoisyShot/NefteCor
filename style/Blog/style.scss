@@ -159,7 +159,9 @@ header {
                align-items: flex-end;
                display: flex;
                justify-content: center;
-               height: 100%;
+               img {
+                  height: 100%;
+               }
             }
          }
       }
@@ -912,7 +914,7 @@ footer {
             display: none;
          }
          .reviews_card_block {
-            width: 1200px;
+            width: 150vw;
             display: flex;
          }
          .reviews_card {

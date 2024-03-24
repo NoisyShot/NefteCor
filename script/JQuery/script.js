@@ -1,3 +1,4 @@
+// smooth scroll - start
 jQuery(document).ready(function () {
    jQuery("a.scrollto").click(function () {
       elementClick = jQuery(this).attr("href")
@@ -23,5 +24,5 @@ window.onclick = function (e) {
       else (floatingNavbar.classList.add('show'))
    }
 };
-
+// smooth scroll - end
 
