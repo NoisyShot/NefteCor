@@ -7,11 +7,11 @@
   <title>НефтеКор</title>
 
   <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="icon/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon/favicon-16x16.png">
-  <link rel="manifest" href="icon/favicon/site.webmanifest">
-  <link rel="mask-icon" href="icon/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+  <link rel="manifest" href="icons/favicon/site.webmanifest">
+  <link rel="mask-icon" href="icons/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#603cba">
   <meta name="theme-color" content="#ffffff">
   <!-- favicon - end -->
@@ -37,406 +37,474 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <nav class="navbar">
-        <div class="navbar_img">
-          <img src="image/Main/Menu_Logo.svg" alt="Logo_NefteCor" />
-        </div>
-        <div class="navbar_content">
-          <div class="navbar_list">
-            <ol>
-              <li>
-                <a href="index.html">Главная</a>
-              </li>
-              <li>
-                <a href="DT_fuel.html">Дизельное топливо</a>
-              </li>
-              <li>
-                <a href="Mini_Gas_station.html">Мини-АЗС</a>
-              </li>
-              <li>
-                <a href="Stove_Heating.html">Печное топливо</a>
-              </li>
-              <li>
-                <a href="Marine_fuel.html">Судовое топливо</a>
-              </li>
-              <li>
-                <a href="Blog.html">Блог</a>
-              </li>
-              <li>
-                <a href="Contacts.html">Контакты</a>
-              </li>
-              <li>
-                <a href="#"><img src="image/Icons/Personal_Area.svg" alt="Personal_Area" />Личный кабинет</a>
-              </li>
-            </ol>
-          </div>
-          <div class="navbar_contacts">
-            <ol>
-              <li>
-                <img src="image/Icons/Time.svg" alt="Time" />
-                <p>Пн-Пт:&nbsp;9:00&nbsp;–&nbsp;19:00</p>
-              </li>
-              <li>
-                <img src="image/Icons/Mail.svg" alt="Mail" />
-                <p>info@neftekor.ru</p>
-              </li>
-              <li>
-                <img src="image/Icons/Phone.svg" alt="Phone" />
-                <p>+7(495)7965383</p>
-              </li>
-            </ol>
-          </div>
-        </div>
-        <!--Выплывающее меню-->
-        <div id="floatingNavbar" class="floating_navbar show" onclick="myFunction()">
-          <img src=" image/Icons/NAV.svg" alt="NAV" />
-        </div>
-        <div class="floating_block" id="floatingBlock">
-          <ol>
-            <li>
-              <a href="index.html">Главная</a>
-            </li>
-            <li>
-              <a href="DT_fuel.html">Дизельное топливо</a>
-            </li>
-            <li>
-              <a href="Mini_Gas_station.html">Мини-АЗС</a>
-            </li>
-            <li>
-              <a href="Stove_Heating.html">Печное топливо</a>
-            </li>
-            <li>
-              <a href="Marine_fuel.html">Судовое топливо</a>
-            </li>
-            <li>
-              <a href="Blog.html">Блог</a>
-            </li>
-            <li>
-              <a href="Contacts.html">Контакты</a>
-            </li>
-            <li>
-              <a href="#"><img src="image/Icons/Personal_Area(yellow).svg" alt="Personal_Area" />Личный кабинет</a>
-            </li>
-          </ol>
-        </div>
-      </nav>
-      <div class="top">
-        <h1>
-          <span class="yellow_text">Поставка нефтепродуктов</span> в Москве и
-          Московской области
-        </h1>
-        <p>От 1000 литров и от 46 рублей за литр</p>
-        <a class="scrollto" href="#form"> Заказать звонок </a>
-      </div>
-      <h2>Нефтепродукты</h2>
-    </header>
-    <div class="main">
-      <div class="block product">
-        <div class="product_left">
-          <div class="card card_left">
-            <h3>Дизельное топливо</h3>
-            <p>
-              Мы являемся надежным поставщиком дизельного топлива в Москве и
-              Московской области
-            </p>
-            <a href="DT_fuel.html"> Подробнее </a>
-          </div>
-        </div>
-        <div class="product_right">
-          <div class="card card_right">
-            <h3>Судовое топливо</h3>
-            <p>
-              Мы предоставляем судовое дизельное топливо как для физических
-              лиц, так и компаниям
-            </p>
-            <a href="Marine_fuel.html"> Подробнее </a>
-          </div>
-        </div>
+  <nav class="navbar">
 
-        <div class="product_bottom">
-          <div class="card card_bottom">
-            <h3>Печное топливо</h3>
-            <p>
-              Печное топливо может служить для отопления коммерческой
-              недвижимости и частных домов, строительных площадок, в качестве
-              топлива для небольших котельных и сельхоз организаций.
-            </p>
-            <a href="Marine_fuel.html"> Подробнее </a>
-          </div>
-        </div>
-      </div>
-      <div class="block gas_station">
-        <a class="scrollto" href="#form"><img src="image/Icons/Arrow_1.svg" alt="" /></a>
-        <div class="block_center">
-          <h2>
-            Умная
-            <span class="yellow_text capital_letters">азс нефтекор</span>
-          </h2>
-          <p>
-            Мы предоставляем АЗС с комплектом разрешительной документации. У
-            нас есть решение для любого объема потребления
-          </p>
-          <div class="card_block">
-            <div class="card_gas_station">
-              <a href="Mini_Gas_station.html"></a>
-              <h4>
-                Мини АЗС на <span class="yellow_text">4500 литров</span>
-              </h4>
-              <p>
-                Оптимально для потребления от 10 до 15 тысяч литров в месяц
-              </p>
-            </div>
-            <div class="card_gas_station">
-              <a href="Mini_Gas_station.html"></a>
-              <h4>
-                Мини АЗС на <span class="yellow_text">10 000 литров</span>
-              </h4>
-              <p>
-                Оптимально для потребления от 15 до 35 тысяч литров в месяц
-              </p>
-            </div>
-            <div class="card_gas_station">
-              <a href="Mini_Gas_station.html"></a>
-              <h4>
-                Мини АЗС на <span class="yellow_text">20 000 литров</span>
-              </h4>
-              <p>Оптимально для потребления от 35 тысяч литров в месяц</p>
-            </div>
-          </div>
-          <a class="scrollto" href="#form"><span class="yellow_text">Заказать Мини АЗС</span></a>
-        </div>
-        <a class="scrollto" href="#form"><img src="image/Icons/Arrow_1.svg" alt="" /></a>
-      </div>
-      <div class="block manufacturers">
-        <h2>
-          <span class="yellow_text">Производители</span> качественного топлива
-        </h2>
-        <p>
-          С которыми у нас прямые договора. Вы получите топливо без
-          посредников
-        </p>
-        <div class="card_block">
-          <img src="image/Main/Manufacturers/Buelder-2.png" alt="TatNeft" />
-          <img src="image/Main/Manufacturers/Buelder-3.png" alt="RosNeft" />
-          <img src="image/Main/Manufacturers/Buelder-4.png" alt="GasProm" />
-          <img src="image/Main/Manufacturers/Buelder-5.png" alt="Lukoil" />
-          <img src="image/Main/Manufacturers/Buelder-1.png" alt="BashNeft" />
-        </div>
-      </div>
-      <div class="block geography">
-        <h2>География <span class="yellow_text">поставок</span></h2>
-        <img src="image/Main/Delivery_Geography.png" alt="Delivery_Geography" />
-      </div>
-      <div class="block clients">
-        <h2><span class="yellow_text">Клиенты</span></h2>
-        <p>Мы поставляем дизельное топливо более 15 лет</p>
-        <div class="card_block">
-          <img src="image/Main/Clients/Clients_6.png" alt="LOM" />
-          <img src="image/Main/Clients/Clients_5.png" alt="Atlant" />
-          <img src="image/Main/Clients/Clients_4.png" alt="№22" />
-          <img src="image/Main/Clients/Clients_2.png" alt="DEKA" />
-          <img src="image/Main/Clients/Clients_3.png" alt="Zhivnica" />
-          <img src="image/Main/Clients/Clients_1.png" alt="ATP" />
-        </div>
-      </div>
-      <div class="block reviews">
-        <h2>Отзывы</h2>
-        <div class="reviews_card_block">
-          <div class="reviews_card">
-            <p class="vertical_text">Наведите, чтобы посмотреть письмо</p>
-            <img src="image/Main/Reviews/Reviews_1.png" alt="Review" />
-            <div class="review">
-              <h3><span class="yellow_text">ООО "ДЭКА"</span></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="reviews_card">
-            <p class="vertical_text">Наведите, чтобы посмотреть письмо</p>
-            <img src="image/Main/Reviews/Reviews_1.png" alt="Review" />
-            <div class="review">
-              <h3>
-                <span class="yellow_text">ООО "Уваровская ПМК&nbsp;22"</span>
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-          <div class="reviews_card">
-            <p class="vertical_text">Наведите, чтобы посмотреть письмо</p>
-            <img src="image/Main/Reviews/Reviews_1.png" alt="Review" />
-            <div class="review">
-              <h3><span class="yellow_text">ООО "ВТОРМЕТАЛЛ"</span></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum
-                dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="block news">
-        <h2><span class="yellow_text">Новости </span>топливного рынка</h2>
-        <div class="block_news_card">
-          <div class="news_card">
-            <div class="new_img">
-              <img src="image/Main/News/image_11.svg" alt="Photo" />
-            </div>
-            <div class="new_text">
-              <h3>Заголовок новости</h3>
-              <p>
-                Текст новости новости Текст новости новости Текст новости
-                Текст новости Текст новости новости Текст новости новости
-                Текст новости Текст новости
-              </p>
-              <a href="#">Подробнее</a>
-            </div>
-          </div>
-          <div class="news_card">
-            <div class="new_img">
-              <img src="image/Main/News/image_11.svg" alt="Photo" />
-            </div>
-            <div class="new_text">
-              <h3>Заголовок новости</h3>
-              <p>
-                Текст новости новости Текст новости новости Текст новости
-                Текст новости Текст новости новости Текст новости новости
-                Текст новости Текст новости
-              </p>
-              <a href="#">Подробнее</a>
-            </div>
-          </div>
-          <div class="news_card">
-            <div class="new_img">
-              <img src="image/Main/News/image_11.svg" alt="Photo" />
-            </div>
-            <div class="new_text">
-              <h3>Заголовок новости</h3>
-              <p>
-                Текст новости новости Текст новости новости Текст новости
-                Текст новости Текст новости новости Текст новости новости
-                Текст новости Текст новости
-              </p>
-              <a href="#">Подробнее</a>
-            </div>
-          </div>
-        </div>
-        <a class="all_news" href="Blog.html">Смотреть все новости</a>
-      </div>
-      <div class="block form" id="form">
-        <form action="#">
-          <h3>Свяжитесь<span class="yellow_text"> с нами!</span></h3>
-          <input type="text" placeholder="Имя" />
-          <input type="tel" placeholder="Телефон" />
-          <input type="submit" value="Отправить" />
-          <div class="pruvacy_check">
-            <label>Согласен с <a href="#">политикой конфиденциальности</a></label><input type="checkbox" />
-          </div>
-        </form>
-      </div>
-      <div class="block team">
-        <h2>Наша <span class="yellow_text">команда</span></h2>
-        <div class="block_employees">
-          <div class="employee_card">
-            <img src="image/Main/Our_Team/Employee_1.png" alt="Employee" />
-            <h3>
-              <span class="yellow_text">Олег Костенко</span>
-            </h3>
-            <p>Менеджер по работе с клиентами</p>
-            <p>+ 7 999 999 99 99</p>
-          </div>
-          <div class="employee_card">
-            <img src="image/Main/Our_Team/Employee_2.png" alt="employee" />
-            <h3>
-              <span class="yellow_text">Олег Костенко</span>
-            </h3>
-            <p>Менеджер по работе с клиентами</p>
-            <p>+ 7 999 999 99 99</p>
-          </div>
-          <div class="employee_card">
-            <img src="image/Main/Our_Team/Employee_3.png" alt="employee" />
-            <h3>
-              <span class="yellow_text">Олег Костенко</span>
-            </h3>
-            <p>Менеджер по работе с клиентами</p>
-            <p>+ 7 999 999 99 99</p>
-          </div>
-        </div>
-      </div>
-      <div class="block map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85486.80566504624!2d37.62997971848195!3d55.7337722726286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1690699737457!5m2!1sru!2sru"
-          width="100%" height="634px" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+    <div class="navbar__logo">
+      <img src="image/index/Navbar_logo.png" alt="Logo_NefteCor" />
     </div>
-    <footer>
-      <div class="offers">
-        <img src="image/Main/Menu_Logo_footer.svg" alt="Logo" />
-        <div class="line_block">
-          <p>Отсутствие посредников на всех этапах топливного обеспечения.</p>
-          <p>
-            Закупка напрямую с НПЗ, собственное производство емкостей, ТРК и
-            мини АЗС.
-          </p>
-          <p>Поставка топлива своими бензовозами.</p>
-        </div>
-      </div>
-      <div class="menu">
-        <ol>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="DT_fuel.html">Дизельное топливо</a></li>
-          <li><a href="Mini_Gas_station.html">Мини-АЗС</a></li>
-          <li><a href="Stove_Heating.html">Печное топливо</a></li>
-          <li><a href="Marine_fuel.html">Судовое топливо</a></li>
-          <li><a href="Blog.html">Блог</a></li>
-          <li>
-            <a href="#"><img src="image/Icons/Personal_Area_footer.svg" alt="Personal_Area" />Личный кабинет</a>
+
+    <div class="navbar__content">
+      <div class="navbar__menu navbar__menu-desctop">
+        <ol class="navbar__menu-list">
+          <li class="navbar__menu-link">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="navbar__menu-link">
+            <a href="DT_fuel.html">Дизельное топливо</a>
+          </li>
+          <li class="navbar__menu-link">
+            <a href="Mini_Gas_station.html">Мини-АЗС</a>
+          </li>
+          <li class="navbar__menu-link">
+            <a href="Stove_Heating.html">Печное топливо</a>
+          </li>
+          <li class="navbar__menu-link">
+            <a href="Marine_fuel.html">Судовое топливо</a>
+          </li>
+          <li class="navbar__menu-link">
+            <a href="Blog.html">Блог</a>
+          </li>
+          <li class="navbar__menu-link">
+            <a href="Contacts.html">Контакты</a>
+          </li>
+          <li class="navbar__menu-link navbar__menu-personal-area">
+            <a href="#">
+              <svg width="21.000000" height="25.000000" viewBox="0 0 21 25">
+                <use href="image/sprite.svg#menu-personal-area"></use>
+              </svg>
+              Личный кабинет</a>
           </li>
         </ol>
       </div>
-      <div class="copyright">
-        <div class="copyright_line">
-          <p>&copy;2022 Все права защищены</p>
-          <a href="#">Политика конфиденциальности</a>
-        </div>
-        <p>
-          Мы в соцсетях:
-          <a href="https://dzen.ru/?utm_referrer=www.google.com" target="_blank"><img
-              src="image/Icons/Social_Media/Yandex_Zen_logo_icon _1.svg" alt="Yandex_Zen" /></a>
-          <a href="https://vk.com/" target="_blank"><img src="image/Icons/Social_Media/VK_com_1.svg" alt="VK" /></a>
-          <a href="https://www.whatsapp.com/?lang=ru_RU" target="_blank"><img
-              src="image/Icons/Social_Media/whatsapp_1.svg" alt="Whatsapp" /></a>
-          <a href="https://web.telegram.org" target="_blank"><img src="image/Icons/Social_Media/telegram_app_1.svg"
-              alt="Telegram" /></a>
-        </p>
+
+      <div class="navbar__contacts">
+        <ol class="navbar__contacts-list">
+          <li class="navbar__opening-hours">
+            <svg width="21.000000" height="22.000000" viewBox="0 0 21 22">
+              <use href="image/sprite.svg#clock"></use>
+            </svg>
+            <p>Пн-Пт:&nbsp;9:00&nbsp;–&nbsp;19:00</p>
+          </li>
+
+          <li class="navbar__email">
+            <a href="mailto:info@neftekor.ru">
+              <svg width="25.000000" height="25.000000" viewBox="0 0 25 25">
+                <use href="image/sprite.svg#email"></use>
+              </svg>
+              info@neftekor.ru
+            </a>
+          </li>
+
+          <li class="navbar__phone">
+            <a href="tel:+74957965383">
+              <svg width="23.000000" height="23.000000" viewBox="0 0 23 23">
+                <use href="image/sprite.svg#phone"></use>
+              </svg>
+              +7(495)7965383
+            </a>
+          </li>
+        </ol>
       </div>
-    </footer>
+    </div>
+
+    <!--Выплывающее меню - start -->
+
+    <div class="navbar__open-close-button" onclick="myFunction()"> <!--to do переделать функцию в JS-->
+
+      <div class="navbar__open-button">
+        <svg width="54.000000" height="47.000000" viewBox="0 0 54 47" fill="none" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs />
+          <rect id="Rectangle 123" rx="3.500000" width="54.000000" height="7.000000" fill="#FFFFFF"
+            fill-opacity="1.000000" />
+          <rect id="Rectangle 124" y="20.000000" rx="3.500000" width="54.000000" height="7.000000" fill="#FFFFFF"
+            fill-opacity="1.000000" />
+          <rect id="Rectangle 125" y="40.000000" rx="3.500000" width="54.000000" height="7.000000" fill="#FFFFFF"
+            fill-opacity="1.000000" />
+        </svg>
+      </div>
+
+      <div class="navbar__close-button navbar__button_hidden">
+        <svg width="52.000000" height="52.000000" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+          <defs />
+          <rect id="Rectangle 123" y="47.000000" rx="3.500000" width="66.098404" height="7.000000"
+            transform="rotate(-45 0.000000 47.000000)" fill="#5B5B5B" fill-opacity="1.000000" />
+          <rect id="Rectangle 125" x="5.000000" rx="3.500000" width="66.098404" height="7.000000"
+            transform="rotate(45 5.000000 0.000000)" fill="#5B5B5B" fill-opacity="1.000000" />
+        </svg>
+      </div>
+
+    </div>
+    <div class="navbar__menu navbar__menu-mobail">
+      <ol class="navbar__menu-list">
+        <li class="navbar__menu-link">
+          <a href="index.html">Главная</a>
+        </li>
+        <li class="navbar__menu-link">
+          <a href="DT_fuel.html">Дизельное топливо</a>
+        </li>
+        <li class="navbar__menu-link">
+          <a href="Mini_Gas_station.html">Мини-АЗС</a>
+        </li>
+        <li class="navbar__menu-link">
+          <a href="Stove_Heating.html">Печное топливо</a>
+        </li>
+        <li class="navbar__menu-link">
+          <a href="Marine_fuel.html">Судовое топливо</a>
+        </li>
+        <li class="navbar__menu-link">
+          <a href="Blog.html">Блог</a>
+        </li>
+        <li class="navbar__menu-link">
+          <a href="Contacts.html">Контакты</a>
+        </li>
+        <li class="navbar__menu-link navbar__menu-personal-area">
+          <a href="#">
+            <svg width="21.000000" height="25.000000" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <clipPath id="clip147_259">
+                  <rect id="Logout 1" width="21.000000" height="25.000000" fill="white" fill-opacity="0" />
+                </clipPath>
+              </defs>
+              <rect id="Logout 1" width="21.000000" height="25.000000" fill="#FFFFFF" fill-opacity="0" />
+              <g clip-path="url(#clip147_259)">
+                <path id="Vector"
+                  d="M3.98 3.12C2.41 3.12 1.12 4.41 1.12 5.98L1.12 19.01C1.12 20.58 2.41 21.87 3.98 21.87L13.36 21.87C14.93 21.87 16.22 20.58 16.22 19.01C16.23 18.9 16.21 18.8 16.17 18.7C16.13 18.61 16.07 18.52 16 18.45C15.93 18.37 15.84 18.31 15.74 18.27C15.65 18.23 15.55 18.21 15.44 18.21C15.34 18.21 15.24 18.23 15.14 18.27C15.05 18.31 14.96 18.37 14.89 18.45C14.81 18.52 14.76 18.61 14.72 18.7C14.68 18.8 14.66 18.9 14.66 19.01C14.66 19.73 14.09 20.31 13.36 20.31L3.98 20.31C3.26 20.31 2.68 19.73 2.68 19.01L2.68 5.98C2.68 5.26 3.26 4.68 3.98 4.68L13.36 4.68C14.09 4.68 14.66 5.26 14.66 5.98C14.66 6.09 14.68 6.19 14.72 6.29C14.76 6.38 14.81 6.47 14.89 6.54C14.96 6.62 15.05 6.68 15.14 6.72C15.24 6.76 15.34 6.78 15.44 6.78C15.55 6.78 15.65 6.76 15.74 6.72C15.84 6.68 15.93 6.62 16 6.54C16.07 6.47 16.13 6.38 16.17 6.29C16.21 6.19 16.23 6.09 16.22 5.98C16.22 4.41 14.93 3.12 13.36 3.12L3.98 3.12ZM15.43 8.06C15.28 8.06 15.13 8.11 15 8.19C14.87 8.28 14.77 8.4 14.71 8.55C14.65 8.69 14.64 8.85 14.67 9C14.7 9.15 14.78 9.29 14.89 9.4L17.2 11.71L6.07 11.71C5.96 11.71 5.86 11.73 5.77 11.77C5.67 11.81 5.58 11.87 5.51 11.94C5.43 12.01 5.38 12.1 5.34 12.19C5.3 12.29 5.28 12.39 5.28 12.5C5.28 12.6 5.3 12.7 5.34 12.8C5.38 12.89 5.43 12.98 5.51 13.05C5.58 13.12 5.67 13.18 5.77 13.22C5.86 13.26 5.96 13.28 6.07 13.28L17.2 13.28L14.89 15.59C14.82 15.66 14.76 15.75 14.71 15.84C14.67 15.94 14.65 16.04 14.65 16.14C14.65 16.25 14.67 16.35 14.71 16.45C14.75 16.54 14.81 16.63 14.88 16.7C14.95 16.78 15.04 16.84 15.14 16.88C15.23 16.91 15.34 16.93 15.44 16.93C15.54 16.93 15.65 16.91 15.74 16.87C15.84 16.83 15.92 16.77 16 16.69L19.64 13.05C19.79 12.9 19.87 12.7 19.87 12.5C19.87 12.29 19.79 12.09 19.64 11.94L16 8.3C15.92 8.22 15.84 8.16 15.74 8.12C15.64 8.08 15.54 8.06 15.43 8.06Z"
+                  fill="CurrentColor" fill-opacity="1.000000" fill-rule="nonzero" />
+              </g>
+            </svg>
+            Личный кабинет</a>
+        </li>
+      </ol>
+    </div>
+  </nav>
+
+  <header>
+
+
+
+
+
+
+
+
+    <div class="top">
+      <h1>
+        <span class="yellow_text">Поставка нефтепродуктов</span> в Москве и
+        Московской области
+      </h1>
+      <p>От 1000 литров и от 46 рублей за литр</p>
+      <a class="scrollto" href="#form"> Заказать звонок </a>
+    </div>
+    <h2>Нефтепродукты</h2>
+  </header>
+  <div class="main">
+    <div class="block product">
+      <div class="product_left">
+        <div class="card card_left">
+          <h3>Дизельное топливо</h3>
+          <p>
+            Мы являемся надежным поставщиком дизельного топлива в Москве и
+            Московской области
+          </p>
+          <a href="DT_fuel.html"> Подробнее </a>
+        </div>
+      </div>
+      <div class="product_right">
+        <div class="card card_right">
+          <h3>Судовое топливо</h3>
+          <p>
+            Мы предоставляем судовое дизельное топливо как для физических
+            лиц, так и компаниям
+          </p>
+          <a href="Marine_fuel.html"> Подробнее </a>
+        </div>
+      </div>
+
+      <div class="product_bottom">
+        <div class="card card_bottom">
+          <h3>Печное топливо</h3>
+          <p>
+            Печное топливо может служить для отопления коммерческой
+            недвижимости и частных домов, строительных площадок, в качестве
+            топлива для небольших котельных и сельхоз организаций.
+          </p>
+          <a href="Marine_fuel.html"> Подробнее </a>
+        </div>
+      </div>
+    </div>
+    <div class="block gas_station">
+      <a class="scrollto" href="#form"><img src="image/Icons/Arrow_1.svg" alt="" /></a>
+      <div class="block_center">
+        <h2>
+          Умная
+          <span class="yellow_text capital_letters">азс нефтекор</span>
+        </h2>
+        <p>
+          Мы предоставляем АЗС с комплектом разрешительной документации. У
+          нас есть решение для любого объема потребления
+        </p>
+        <div class="card_block">
+          <div class="card_gas_station">
+            <a href="Mini_Gas_station.html"></a>
+            <h4>
+              Мини АЗС на <span class="yellow_text">4500 литров</span>
+            </h4>
+            <p>
+              Оптимально для потребления от 10 до 15 тысяч литров в месяц
+            </p>
+          </div>
+          <div class="card_gas_station">
+            <a href="Mini_Gas_station.html"></a>
+            <h4>
+              Мини АЗС на <span class="yellow_text">10 000 литров</span>
+            </h4>
+            <p>
+              Оптимально для потребления от 15 до 35 тысяч литров в месяц
+            </p>
+          </div>
+          <div class="card_gas_station">
+            <a href="Mini_Gas_station.html"></a>
+            <h4>
+              Мини АЗС на <span class="yellow_text">20 000 литров</span>
+            </h4>
+            <p>Оптимально для потребления от 35 тысяч литров в месяц</p>
+          </div>
+        </div>
+        <a class="scrollto" href="#form"><span class="yellow_text">Заказать Мини АЗС</span></a>
+      </div>
+      <a class="scrollto" href="#form"><img src="image/Icons/Arrow_1.svg" alt="" /></a>
+    </div>
+    <div class="block manufacturers">
+      <h2>
+        <span class="yellow_text">Производители</span> качественного топлива
+      </h2>
+      <p>
+        С которыми у нас прямые договора. Вы получите топливо без
+        посредников
+      </p>
+      <div class="card_block">
+        <img src="image/Main/Manufacturers/Buelder-2.png" alt="TatNeft" />
+        <img src="image/Main/Manufacturers/Buelder-3.png" alt="RosNeft" />
+        <img src="image/Main/Manufacturers/Buelder-4.png" alt="GasProm" />
+        <img src="image/Main/Manufacturers/Buelder-5.png" alt="Lukoil" />
+        <img src="image/Main/Manufacturers/Buelder-1.png" alt="BashNeft" />
+      </div>
+    </div>
+    <div class="block geography">
+      <h2>География <span class="yellow_text">поставок</span></h2>
+      <img src="image/Main/Delivery_Geography.png" alt="Delivery_Geography" />
+    </div>
+    <div class="block clients">
+      <h2><span class="yellow_text">Клиенты</span></h2>
+      <p>Мы поставляем дизельное топливо более 15 лет</p>
+      <div class="card_block">
+        <img src="image/Main/Clients/Clients_6.png" alt="LOM" />
+        <img src="image/Main/Clients/Clients_5.png" alt="Atlant" />
+        <img src="image/Main/Clients/Clients_4.png" alt="№22" />
+        <img src="image/Main/Clients/Clients_2.png" alt="DEKA" />
+        <img src="image/Main/Clients/Clients_3.png" alt="Zhivnica" />
+        <img src="image/Main/Clients/Clients_1.png" alt="ATP" />
+      </div>
+    </div>
+    <div class="block reviews">
+      <h2>Отзывы</h2>
+      <div class="reviews_card_block">
+        <div class="reviews_card">
+          <p class="vertical_text">Наведите, чтобы посмотреть письмо</p>
+          <img src="image/Main/Reviews/Reviews_1.png" alt="Review" />
+          <div class="review">
+            <h3><span class="yellow_text">ООО "ДЭКА"</span></h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <div class="reviews_card">
+          <p class="vertical_text">Наведите, чтобы посмотреть письмо</p>
+          <img src="image/Main/Reviews/Reviews_1.png" alt="Review" />
+          <div class="review">
+            <h3>
+              <span class="yellow_text">ООО "Уваровская ПМК&nbsp;22"</span>
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+        <div class="reviews_card">
+          <p class="vertical_text">Наведите, чтобы посмотреть письмо</p>
+          <img src="image/Main/Reviews/Reviews_1.png" alt="Review" />
+          <div class="review">
+            <h3><span class="yellow_text">ООО "ВТОРМЕТАЛЛ"</span></h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in reprehenderit in voluptate velit esse cillum
+              dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block news">
+      <h2><span class="yellow_text">Новости </span>топливного рынка</h2>
+      <div class="block_news_card">
+        <div class="news_card">
+          <div class="new_img">
+            <img src="image/Main/News/image_11.svg" alt="Photo" />
+          </div>
+          <div class="new_text">
+            <h3>Заголовок новости</h3>
+            <p>
+              Текст новости новости Текст новости новости Текст новости
+              Текст новости Текст новости новости Текст новости новости
+              Текст новости Текст новости
+            </p>
+            <a href="#">Подробнее</a>
+          </div>
+        </div>
+        <div class="news_card">
+          <div class="new_img">
+            <img src="image/Main/News/image_11.svg" alt="Photo" />
+          </div>
+          <div class="new_text">
+            <h3>Заголовок новости</h3>
+            <p>
+              Текст новости новости Текст новости новости Текст новости
+              Текст новости Текст новости новости Текст новости новости
+              Текст новости Текст новости
+            </p>
+            <a href="#">Подробнее</a>
+          </div>
+        </div>
+        <div class="news_card">
+          <div class="new_img">
+            <img src="image/Main/News/image_11.svg" alt="Photo" />
+          </div>
+          <div class="new_text">
+            <h3>Заголовок новости</h3>
+            <p>
+              Текст новости новости Текст новости новости Текст новости
+              Текст новости Текст новости новости Текст новости новости
+              Текст новости Текст новости
+            </p>
+            <a href="#">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      <a class="all_news" href="Blog.html">Смотреть все новости</a>
+    </div>
+    <div class="block form" id="form">
+      <form action="#">
+        <h3>Свяжитесь<span class="yellow_text"> с нами!</span></h3>
+        <input type="text" placeholder="Имя" />
+        <input type="tel" placeholder="Телефон" />
+        <input type="submit" value="Отправить" />
+        <div class="pruvacy_check">
+          <label>Согласен с <a href="#">политикой конфиденциальности</a></label><input type="checkbox" />
+        </div>
+      </form>
+    </div>
+    <div class="block team">
+      <h2>Наша <span class="yellow_text">команда</span></h2>
+      <div class="block_employees">
+        <div class="employee_card">
+          <img src="image/Main/Our_Team/Employee_1.png" alt="Employee" />
+          <h3>
+            <span class="yellow_text">Олег Костенко</span>
+          </h3>
+          <p>Менеджер по работе с клиентами</p>
+          <p>+ 7 999 999 99 99</p>
+        </div>
+        <div class="employee_card">
+          <img src="image/Main/Our_Team/Employee_2.png" alt="employee" />
+          <h3>
+            <span class="yellow_text">Олег Костенко</span>
+          </h3>
+          <p>Менеджер по работе с клиентами</p>
+          <p>+ 7 999 999 99 99</p>
+        </div>
+        <div class="employee_card">
+          <img src="image/Main/Our_Team/Employee_3.png" alt="employee" />
+          <h3>
+            <span class="yellow_text">Олег Костенко</span>
+          </h3>
+          <p>Менеджер по работе с клиентами</p>
+          <p>+ 7 999 999 99 99</p>
+        </div>
+      </div>
+    </div>
+    <div class="block map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d85486.80566504624!2d37.62997971848195!3d55.7337722726286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1690699737457!5m2!1sru!2sru"
+        width="100%" height="634px" style="border: 0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
+  <footer>
+    <div class="offers">
+      <img src="image/Main/Menu_Logo_footer.svg" alt="Logo" />
+      <div class="line_block">
+        <p>Отсутствие посредников на всех этапах топливного обеспечения.</p>
+        <p>
+          Закупка напрямую с НПЗ, собственное производство емкостей, ТРК и
+          мини АЗС.
+        </p>
+        <p>Поставка топлива своими бензовозами.</p>
+      </div>
+    </div>
+    <div class="menu">
+      <ol>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="DT_fuel.html">Дизельное топливо</a></li>
+        <li><a href="Mini_Gas_station.html">Мини-АЗС</a></li>
+        <li><a href="Stove_Heating.html">Печное топливо</a></li>
+        <li><a href="Marine_fuel.html">Судовое топливо</a></li>
+        <li><a href="Blog.html">Блог</a></li>
+        <li>
+          <a href="#"><img src="image/Icons/Personal_Area_footer.svg" alt="Personal_Area" />Личный кабинет</a>
+        </li>
+      </ol>
+    </div>
+    <div class="copyright">
+      <div class="copyright_line">
+        <p>&copy;2022 Все права защищены</p>
+        <a href="#">Политика конфиденциальности</a>
+      </div>
+      <p>
+        Мы в соцсетях:
+        <a href="https://dzen.ru/?utm_referrer=www.google.com" target="_blank"><img
+            src="image/Icons/Social_Media/Yandex_Zen_logo_icon _1.svg" alt="Yandex_Zen" /></a>
+        <a href="https://vk.com/" target="_blank"><img src="image/Icons/Social_Media/VK_com_1.svg" alt="VK" /></a>
+        <a href="https://www.whatsapp.com/?lang=ru_RU" target="_blank"><img
+            src="image/Icons/Social_Media/whatsapp_1.svg" alt="Whatsapp" /></a>
+        <a href="https://web.telegram.org" target="_blank"><img src="image/Icons/Social_Media/telegram_app_1.svg"
+            alt="Telegram" /></a>
+      </p>
+    </div>
+  </footer>
+
 </body>
 
 </html>

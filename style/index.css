@@ -1,7 +1,8 @@
 @import url(normalize.css);
 @import url(default.css);
-@import url(index/index.css);
-/* @import url(DT_fuel/index.css);
+@import url(general/index.css);
+/* @import url(index/index.css);
+@import url(DT_fuel/index.css);
 @import url(Mini_Gas_station/index.css);
 @import url(Stove_Heating/index.css);
 @import url(Marine_fuel/index.css);

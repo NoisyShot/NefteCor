@@ -26,3 +26,18 @@ window.onclick = function (e) {
 };
 // smooth scroll - end
 
+// drop-down menu - start
+let menu = $('.navbar'),
+		scrollPrev = 0;
+
+$(window).scroll(function() {
+	let scrolled = $(window).scrollTop();
+ 
+	if ( scrolled > 100 && scrolled > scrollPrev ) {
+		menu.addClass('out');
+	} else {
+		menu.removeClass('out');
+	}
+	scrollPrev = scrolled;
+});
+// drop-down menu - end
